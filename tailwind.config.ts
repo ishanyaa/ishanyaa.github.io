@@ -66,8 +66,8 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				terminal: {
-					green: 'hsl(var(--terminal-green))',
-					'green-dim': 'hsl(var(--terminal-green-dim))',
+					blue: 'hsl(var(--terminal-blue))',
+					'blue-dim': 'hsl(var(--terminal-blue-dim))',
 				}
 			},
 			borderRadius: {

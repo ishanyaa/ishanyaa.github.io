@@ -27,7 +27,7 @@
     --muted: 0 0% 6%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 120 100% 40%;
+    --accent: 220 100% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -35,24 +35,24 @@
 
     --border: 0 0% 12%;
     --input: 0 0% 8%;
-    --ring: 120 100% 40%;
+    --ring: 220 100% 60%;
 
     --radius: 0.375rem;
 
     /* Custom Design Tokens */
-    --terminal-green: 120 100% 40%;
-    --terminal-green-dim: 120 50% 30%;
-    --glow-subtle: 120 100% 40%;
+    --terminal-blue: 220 100% 60%;
+    --terminal-blue-dim: 220 70% 45%;
+    --glow-subtle: 220 100% 60%;
     --surface-elevated: 0 0% 6%;
     --surface-hover: 0 0% 8%;
     
     /* Gradients */
     --gradient-subtle: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
-    --gradient-terminal: linear-gradient(135deg, hsl(var(--terminal-green) / 0.1) 0%, transparent 100%);
+    --gradient-terminal: linear-gradient(135deg, hsl(var(--terminal-blue) / 0.1) 0%, transparent 100%);
     
     /* Shadows & Glows */
-    --shadow-card: 0 4px 20px -2px hsl(var(--terminal-green) / 0.1);
-    --shadow-glow: 0 0 20px hsl(var(--terminal-green) / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(var(--terminal-blue) / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--terminal-blue) / 0.3);
     --shadow-subtle: 0 2px 10px -2px hsl(0 0% 0% / 0.3);
     
     /* Animations */
@@ -145,7 +145,7 @@
   }
 
   .glow-text {
-    @apply text-accent drop-shadow-[0_0_8px_hsl(var(--terminal-green)/0.6)];
+    @apply text-accent drop-shadow-[0_0_8px_hsl(var(--terminal-blue)/0.6)];
   }
 
   .gradient-text {
