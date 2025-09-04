@@ -113,21 +113,21 @@ const About = () => {
           <div>
             <h3 className="text-lg font-semibold mb-3">Achievements & Interests</h3>
             <ul className="text-sm text-muted-foreground space-y-2">
-              <li>🏅 Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
-              <li>🥈 Silver Medal in Shot Put</li>
-              <li>🎯 JEE Paper 2 All India Rank 160</li>
-              <li>📝 Peer Counselor helping fellow students</li>
-              <li>🎭 Active debater in college debate society</li>
+              <li>Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
+              <li>Silver Medal in Shot Put</li>
+              <li>JEE Paper 2 All India Rank 160</li>
+              <li>Peer Counselor helping fellow students</li>
+              <li>Active debater in college debate society</li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-3">Current Vibes</h3>
             <ul className="text-sm text-muted-foreground space-y-2">
-              <li>🔬 Working towards research publications</li>
-              <li>🤖 Teaching Digital Circuits & Verilog to students</li>
-              <li>🌍 Planning my next adventure (check Places page!)</li>
-              <li>☕ Perfecting my coffee-to-code ratio</li>
-              <li>🎯 Always looking for the next interesting problem to solve</li>
+              <li>Working towards research publications</li>
+              <li>Teaching Digital Circuits & Verilog to students</li>
+              <li>Planning my next adventure (check Places page!)</li>
+              <li>Perfecting my coffee-to-code ratio</li>
+              <li>Always looking for the next interesting problem to solve</li>
             </ul>
           </div>
         </div>

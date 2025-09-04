@@ -79,14 +79,14 @@ const Misc = () => {
   ];
 
   const quickFacts = [
-    '☕ Coffee-to-code ratio: approximately 2:1',
-    '🏃‍♀️ Can throw a discus farther than most people can run',
-    '🤖 Owns more Raspberry Pis than most people own houseplants',
-    '📚 Has read more research papers than novels (unfortunately)',
-    '🎯 Can debug Verilog and explain it to confused undergrads simultaneously',
-    '🧠 Thinks in both Python and mathematical notation',
-    '🌍 Navigation skill: excellent with maps, terrible with social cues',
-    '🔬 Believes every problem can be solved with enough caffeine and federated learning'
+    'Coffee-to-code ratio: approximately 2:1',
+    'Can throw a discus farther than most people can run',
+    'Owns more Raspberry Pis than most people own houseplants',
+    'Has read more research papers than novels (unfortunately)',
+    'Can debug Verilog and explain it to confused undergrads simultaneously',
+    'Thinks in both Python and mathematical notation',
+    'Navigation skill: excellent with maps, terrible with social cues',
+    'Believes every problem can be solved with enough caffeine and federated learning'
   ];
 
   return (

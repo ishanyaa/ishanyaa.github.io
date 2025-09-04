@@ -1,4 +1,5 @@
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const Blog = () => {
   const posts = [{
     title: 'Federated Learning on Edge: Lessons from Raspberry Pi Deployment',
@@ -100,9 +101,9 @@ const Blog = () => {
             </span>)}
         </div>
         
-        <button className="btn-terminal flex items-center gap-2">
+        <Link to="/blog/federated-learning-edge-raspberry-pi" className="btn-terminal flex items-center gap-2">
           Read More <ArrowRight className="w-4 h-4" />
-        </button>
+        </Link>
       </section>
 
       {/* All Posts */}
@@ -147,9 +148,12 @@ const Blog = () => {
                 </div>
                 
                 <div className="flex flex-col justify-between md:w-auto">
-                  <button className="btn-terminal flex items-center gap-2 whitespace-nowrap">
+                  <Link 
+                    to={`/blog/${post.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`}
+                    className="btn-terminal flex items-center gap-2 whitespace-nowrap"
+                  >
                     Read More <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>)}
