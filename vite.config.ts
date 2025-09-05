@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   // IMPORTANT for GitHub Pages (root domain repo)
-  base: "/",
+  base: "./",
 }));
 
 
