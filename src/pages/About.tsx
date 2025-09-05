@@ -77,7 +77,7 @@ const About = () => {
           <div>
             <h3 className="text-lg font-semibold text-accent mb-2">Current Research</h3>
             <p className="text-muted-foreground mb-2">
-              <strong>BS Thesis:</strong> Federated Learning under Dr. Haroon R Lone
+              <strong>BS Thesis:</strong> Federated Learning Supervisor: Dr. Haroon R Lone
             </p>
             <p className="text-sm text-muted-foreground">
               Designed and implemented a custom Federated CNN achieving 81.36% accuracy on non-IID data, 
