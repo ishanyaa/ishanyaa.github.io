@@ -1,81 +1,70 @@
 import { MapPin, Calendar, Camera, Plane } from 'lucide-react';
-
 const Places = () => {
-  const places = [
-    {
-      name: 'Tata Institute of Fundamental Research (TIFR)',
-      location: 'Mumbai, Maharashtra',
-      date: 'July 2024',
-      description: 'STCS Vigyan Vidushi 2024 - Advanced theoretical computer science program',
-      category: 'Academic',
-      image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=500&h=300&fit=crop',
-      memories: 'Intensive learning with 31 other brilliant minds from across India'
-    },
-    {
-      name: 'Indian Institute of Science (IISc)',
-      location: 'Bengaluru, Karnataka',
-      date: 'December 2024',
-      description: 'Theory CS Winter School 2024 - Matching Theory and Differential Privacy',
-      category: 'Academic',
-      image: 'https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=500&h=300&fit=crop',
-      memories: 'Amazing discussions on theoretical foundations with world-class researchers'
-    },
-    {
-      name: 'Indian Institute of Science (IISc)',
-      location: 'Bengaluru, Karnataka',
-      date: 'July 2023',
-      description: 'Summer School - Signal Processing, ML, AI, and Power Systems',
-      category: 'Academic',
-      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=300&fit=crop',
-      memories: 'First exposure to cutting-edge research in multiple domains'
-    },
-    {
-      name: 'IIT Delhi',
-      location: 'New Delhi, India',
-      date: 'June - September 2024',
-      description: 'ACM Research Internship - Accessibility tools for visually impaired coders',
-      category: 'Research',
-      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=300&fit=crop',
-      memories: 'Eye-opening experience working on meaningful accessibility technology'
-    },
-    {
-      name: 'Rajasthan Adventures',
-      location: 'Jaipur & Udaipur, Rajasthan',
-      date: 'March 2023',
-      description: 'Exploring the Pink City and City of Lakes during college break',
-      category: 'Travel',
-      image: 'https://images.unsplash.com/photo-1599661046827-dacde84ccd6c?w=500&h=300&fit=crop',
-      memories: 'Incredible architecture, street food, and sunset views over Lake Pichola'
-    },
-    {
-      name: 'Kerala Backwaters',
-      location: 'Alleppey, Kerala',
-      date: 'January 2024',
-      description: 'Houseboat experience in God\'s Own Country',
-      category: 'Travel',
-      image: 'https://images.unsplash.com/photo-1602216056504-b9d34113a2cd?w=500&h=300&fit=crop',
-      memories: 'Peaceful mornings, coconut water, and the most serene boat rides'
-    },
-    {
-      name: 'Himachal Pradesh Trek',
-      location: 'Manali, Himachal Pradesh',
-      date: 'May 2023',
-      description: 'Adventure trek in the Himalayas with college friends',
-      category: 'Adventure',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop',
-      memories: 'Challenging treks, breathtaking views, and campfire stories'
-    },
-    {
-      name: 'Goa Beach Vibes',
-      location: 'North Goa, Goa',
-      date: 'December 2023',
-      description: 'Beach volleyball, sunset parties, and Portuguese architecture',
-      category: 'Travel',
-      image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500&h=300&fit=crop',
-      memories: 'Perfect blend of relaxation and exploration with the debate society crew'
-    }
-  ];
-
+  const places = [{
+    name: 'Tata Institute of Fundamental Research (TIFR)',
+    location: 'Mumbai, Maharashtra',
+    date: 'July 2024',
+    description: 'STCS Vigyan Vidushi 2024 - Advanced theoretical computer science program',
+    category: 'Academic',
+    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=500&h=300&fit=crop',
+    memories: 'Intensive learning with 31 other brilliant minds from across India'
+  }, {
+    name: 'Indian Institute of Science (IISc)',
+    location: 'Bengaluru, Karnataka',
+    date: 'December 2024',
+    description: 'Theory CS Winter School 2024 - Matching Theory and Differential Privacy',
+    category: 'Academic',
+    image: 'https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=500&h=300&fit=crop',
+    memories: 'Amazing discussions on theoretical foundations with world-class researchers'
+  }, {
+    name: 'Indian Institute of Science (IISc)',
+    location: 'Bengaluru, Karnataka',
+    date: 'July 2023',
+    description: 'Summer School - Signal Processing, ML, AI, and Power Systems',
+    category: 'Academic',
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=300&fit=crop',
+    memories: 'First exposure to cutting-edge research in multiple domains'
+  }, {
+    name: 'IIT Delhi',
+    location: 'New Delhi, India',
+    date: 'June - September 2024',
+    description: 'ACM Research Internship - Accessibility tools for visually impaired coders',
+    category: 'Research',
+    image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&h=300&fit=crop',
+    memories: 'Eye-opening experience working on meaningful accessibility technology'
+  }, {
+    name: 'Rajasthan Adventures',
+    location: 'Jaipur & Udaipur, Rajasthan',
+    date: 'March 2023',
+    description: 'Exploring the Pink City and City of Lakes during college break',
+    category: 'Travel',
+    image: 'https://images.unsplash.com/photo-1599661046827-dacde84ccd6c?w=500&h=300&fit=crop',
+    memories: 'Incredible architecture, street food, and sunset views over Lake Pichola'
+  }, {
+    name: 'Kerala Backwaters',
+    location: 'Alleppey, Kerala',
+    date: 'January 2024',
+    description: 'Houseboat experience in God\'s Own Country',
+    category: 'Travel',
+    image: 'https://images.unsplash.com/photo-1602216056504-b9d34113a2cd?w=500&h=300&fit=crop',
+    memories: 'Peaceful mornings, coconut water, and the most serene boat rides'
+  }, {
+    name: 'Himachal Pradesh Trek',
+    location: 'Manali, Himachal Pradesh',
+    date: 'May 2023',
+    description: 'Adventure trek in the Himalayas with college friends',
+    category: 'Adventure',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop',
+    memories: 'Challenging treks, breathtaking views, and campfire stories'
+  }, {
+    name: 'Goa Beach Vibes',
+    location: 'North Goa, Goa',
+    date: 'December 2023',
+    description: 'Beach volleyball, sunset parties, and Portuguese architecture',
+    category: 'Travel',
+    image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500&h=300&fit=crop',
+    memories: 'Perfect blend of relaxation and exploration with the debate society crew'
+  }];
   const getCategoryColor = (category: string) => {
     const colors = {
       'Academic': 'bg-blue-500/10 text-blue-400 border-blue-400/20',
@@ -85,7 +74,6 @@ const Places = () => {
     };
     return colors[category as keyof typeof colors] || 'bg-muted text-muted-foreground border-muted';
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Academic':
@@ -99,9 +87,7 @@ const Places = () => {
         return <MapPin className="w-4 h-4" />;
     }
   };
-
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       {/* Header */}
       <section className="terminal-card">
         <h1 className="text-3xl font-bold gradient-text mb-4">Places</h1>
@@ -133,14 +119,9 @@ const Places = () => {
 
       {/* Gallery Grid */}
       <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {places.map((place, index) => (
-          <div key={index} className="terminal-card card-hover">
+        {places.map((place, index) => <div key={index} className="terminal-card card-hover">
             <div className="relative overflow-hidden rounded-lg mb-4">
-              <img
-                src={place.image}
-                alt={place.name}
-                className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-              />
+              <img src={place.image} alt={place.name} className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
               <div className={`absolute top-2 left-2 px-2 py-1 rounded-md text-xs border ${getCategoryColor(place.category)}`}>
                 <div className="flex items-center gap-1">
                   {getCategoryIcon(place.category)}
@@ -170,8 +151,7 @@ const Places = () => {
                 <p className="text-xs text-accent italic">"{place.memories}"</p>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
       </section>
 
       {/* Travel Philosophy */}
@@ -204,13 +184,11 @@ const Places = () => {
           Currently planning my next research visits and travel adventures. Stay tuned!
         </p>
         <div className="flex flex-wrap gap-3">
-          <span className="text-sm bg-muted px-3 py-1 rounded-md">International Conference 2025</span>
+          
           <span className="text-sm bg-muted px-3 py-1 rounded-md">Northeast India Exploration</span>
           <span className="text-sm bg-muted px-3 py-1 rounded-md">Silicon Valley Research Visit</span>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Places;
