@@ -16,7 +16,7 @@ const About = () => {
           </div>
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl font-bold mb-2 gradient-text">Ishanya</h1>
-            <p className="text-xl text-accent mb-4">Computer Science Researcher & AI/ML Enthusiast</p>
+            <p className="text-xl text-accent mb-4">CS Grad</p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Recent BS graduate in Electrical Engineering and Computer Science from IISER Bhopal, 
               passionate about privacy-preserving systems, and making AI accessible to everyone. When I'm not debugging code or writing research papers, you'll find me 
