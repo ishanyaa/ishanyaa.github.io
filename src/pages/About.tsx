@@ -19,14 +19,13 @@ const About = () => {
             <p className="text-xl text-accent mb-4">Computer Science Researcher & AI/ML Enthusiast</p>
             <p className="text-muted-foreground text-lg leading-relaxed">
               Recent BS graduate in Electrical Engineering and Computer Science from IISER Bhopal, 
-              passionate about federated learning, privacy-preserving systems, and making AI accessible 
-              to everyone. When I'm not debugging code or writing research papers, you'll find me 
+              passionate about privacy-preserving systems, and making AI accessible to everyone. When I'm not debugging code or writing research papers, you'll find me 
               exploring new places or creating memes that only computer scientists understand.
             </p>
             <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>Bhopal, India</span>
+                <span>Bengaluru, India</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <GraduationCap className="w-4 h-4" />
@@ -113,10 +112,10 @@ const About = () => {
           <div>
             <h3 className="text-lg font-semibold mb-3">Achievements & Interests</h3>
             <ul className="text-sm text-muted-foreground space-y-2">
-              <li>Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
-              <li>Silver Medal in Shot Put</li>
+              <li>Editor and Coordinator at Chrysalis</li>
+              <li>AWS Scholar</li>
               <li>JEE Paper 2 All India Rank 160</li>
-              <li>Peer Counselor helping fellow students</li>
+              <li>Peer Counselor</li>
               <li>Active debater in college debate society</li>
             </ul>
           </div>
@@ -124,10 +123,9 @@ const About = () => {
             <h3 className="text-lg font-semibold mb-3">Current Vibes</h3>
             <ul className="text-sm text-muted-foreground space-y-2">
               <li>Working towards research publications</li>
-              <li>Teaching Digital Circuits & Verilog to students</li>
               <li>Planning my next adventure (check Places page!)</li>
               <li>Perfecting my coffee-to-code ratio</li>
-              <li>Always looking for the next interesting problem to solve</li>
+              <li>Always looking for the next interesting problem to solve!</li>
             </ul>
           </div>
         </div>
