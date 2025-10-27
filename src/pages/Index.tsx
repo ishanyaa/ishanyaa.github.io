@@ -15,7 +15,7 @@ const Index = () => {
           <span className="glow-text">Innovate.</span>
         </h1>
         
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">Hi, I’m Ishanya! I’m interested in how we can make AI more meaningful, accessible, and safe. My work often sits at the crossroads of privacy-preserving systems and AI/ML, but I enjoy following questions wherever they lead — from edge computing to natural language processing.
+        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">Hi, I’m Ishanya! I’m interested in how we can make AI more meaningful, accessible, and safe. My work often sits at the crossroads of privacy-preserving systems and AI/ML, but I enjoy following questions wherever they lead, from edge computing to Ai Ethics.
 </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
