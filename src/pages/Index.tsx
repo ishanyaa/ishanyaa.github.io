@@ -15,16 +15,8 @@ const Index = () => {
           <span className="glow-text">Innovate.</span>
         </h1>
         
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">I’m Ishanya, a researcher who loves to solve problems and explore the evolving world of AI and Machine Learning.
-
-I’m interested in how we can make AI more meaningful, accessible, and impactful. My work often sits at the crossroads of privacy-preserving systems and AI/ML, but I enjoy following questions wherever they lead — from edge computing to natural language processing.
-
-At the heart of my work is a simple question:
-How can we push the boundaries of intelligent systems while keeping them useful, inclusive, and future-ready?
-
-I see research as an exploration — part theory, part engineering, and part curiosity-driven wandering. Some days it’s building models on edge devices, other days it’s experimenting with language technologies, and often it’s just asking “what if?” and chasing the answer.
-
-For me, AI is more than a field of study — it’s a way to experiment, create, and discover new possibilities.</p>
+        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">I’m Ishanya! I’m interested in how we can make AI more meaningful, accessible, and safe. My work often sits at the crossroads of privacy-preserving systems and AI/ML, but I enjoy following questions wherever they lead — from edge computing to natural language processing.
+</p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/about" className="btn-terminal flex items-center gap-2">
