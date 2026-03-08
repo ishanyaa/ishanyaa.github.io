@@ -107,7 +107,7 @@ const CV = () => {
     { title: 'ACM India Summer Fellowship Grant (NCAHT, IIT Delhi)', detail: 'Top ~0.5%', year: '2024' },
     { title: 'Udacity Bertelsmann Next Gen Tech Booster Scholarship', detail: 'Top ~2%', year: '2024' },
     { title: 'Professor Ram Kumar Scholarship, EDM Conference', detail: 'Global', year: '2023' },
-    { title: 'All India Rank 160, NTA IIT-JEE Paper 2', detail: 'Top ~1%', year: '2021' },
+    
   ];
 
   const skills = {
