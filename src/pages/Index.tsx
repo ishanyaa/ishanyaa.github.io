@@ -5,7 +5,6 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/MotionWrappe
 const Index = () => {
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
       <section className="text-center py-20">
         <FadeIn>
           <div className="inline-flex items-center gap-2 mb-6 text-accent">
@@ -24,11 +23,10 @@ const Index = () => {
 
         <FadeIn delay={0.2}>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I'm Ishanya, a researcher who loves to solve problems and explore the evolving world of AI and Machine Learning.
-            I'm interested in how we can make AI more meaningful, accessible, and impactful. My work often sits at the crossroads of privacy-preserving systems and AI/ML, but I enjoy following questions wherever they lead -- from edge computing to natural language processing.
-            At the heart of my work is a simple question: How can we push the boundaries of intelligent systems while keeping them useful, inclusive, and future-ready?
-            I see research as an exploration -- part theory, part engineering, and part curiosity-driven wandering. Some days it's building models on edge devices, other days it's experimenting with language technologies, and often it's just asking "what if?" and chasing the answer.
-            For me, AI is more than a field of study -- it's a way to experiment, create, and discover new possibilities.
+            Hey, I'm Ishanya! I recently graduated from IISER Bhopal and now work as a Researcher at TCS Research. 
+            I'm curious about how AI can be made more private, more useful, and more accessible to everyone. 
+            My days usually involve tinkering with edge devices, experimenting with federated learning, 
+            and asking "what if?" a lot. Sometimes the answers surprise me, and that's the best part.
           </p>
         </FadeIn>
 
@@ -37,20 +35,19 @@ const Index = () => {
             <Link to="/about" className="btn-terminal flex items-center gap-2">
               About Me <ArrowRight className="w-4 h-4" />
             </Link>
+            <Link to="/projects" className="btn-terminal flex items-center gap-2">
+              My Projects <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </FadeIn>
       </section>
 
-      {/* Featured Areas */}
-      <section className="grid md:grid-cols-3 gap-8" />
-
-      {/* Quick Links */}
       <FadeIn>
         <section className="terminal-card">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 glow-text">Explore My World</h2>
             <p className="text-muted-foreground">
-              From academic achievements to travel adventures, get to know the person behind the research.
+              From research papers to Himalayan treks, there's a bit of everything here.
             </p>
           </div>
 
@@ -58,28 +55,51 @@ const Index = () => {
             <StaggerItem>
               <Link to="/cv" className="terminal-card card-hover text-center p-4 block">
                 <h3 className="font-semibold mb-2">Experience</h3>
-                <p className="text-sm text-muted-foreground">Research positions, publications, and academic journey</p>
+                <p className="text-sm text-muted-foreground">Research positions, awards, and my academic journey so far</p>
               </Link>
             </StaggerItem>
             <StaggerItem>
               <Link to="/blog" className="terminal-card card-hover text-center p-4 block">
-                <h3 className="font-semibold mb-2">Insights!</h3>
-                <p className="text-sm text-muted-foreground">Technical posts, research reflections, and tutorials</p>
+                <h3 className="font-semibold mb-2">Blog</h3>
+                <p className="text-sm text-muted-foreground">Technical posts, research reflections, and things I've learned</p>
               </Link>
             </StaggerItem>
             <StaggerItem>
               <Link to="/places" className="terminal-card card-hover text-center p-4 block">
                 <h3 className="font-semibold mb-2">Places I've Been</h3>
-                <p className="text-sm text-muted-foreground">Research conferences, academic visits, and adventures</p>
+                <p className="text-sm text-muted-foreground">Research visits, conferences, and travel adventures</p>
               </Link>
             </StaggerItem>
             <StaggerItem>
               <Link to="/misc" className="terminal-card card-hover text-center p-4 block">
-                <h3 className="font-semibold mb-2">Fun & Experiments</h3>
-                <p className="text-sm text-muted-foreground">Side projects, memes, and creative endeavors</p>
+                <h3 className="font-semibold mb-2">Fun Stuff</h3>
+                <p className="text-sm text-muted-foreground">Side experiments, random thoughts, and the lighter side of research</p>
               </Link>
             </StaggerItem>
           </StaggerContainer>
+        </section>
+      </FadeIn>
+
+      <FadeIn>
+        <section className="terminal-card">
+          <h2 className="text-2xl font-bold mb-4 glow-text">What I'm Up To</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="font-semibold text-accent mb-2">At Work</h3>
+              <p className="text-sm text-muted-foreground">
+                Building privacy-sensitive AI systems at TCS Research, Bengaluru. Currently working with 
+                multi-modal physiological data (EEG, ECG, gaze tracking) and designing compact architectures 
+                for edge deployment.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-accent mb-2">On the Side</h3>
+              <p className="text-sm text-muted-foreground">
+                Learning about AI ethics through a Turing College EU-funded program, 
+                mentoring students through Arivu India, and always planning my next trip.
+              </p>
+            </div>
+          </div>
         </section>
       </FadeIn>
     </div>

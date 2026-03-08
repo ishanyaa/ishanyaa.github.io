@@ -1,252 +1,95 @@
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft } from 'lucide-react';
+import { FadeIn } from '@/components/MotionWrapper';
 
 const BlogPost = () => {
   const { slug } = useParams();
-  
-  const posts = {
+
+  const posts: Record<string, { title: string; date: string; readTime: string; tags: string[]; sections: { heading?: string; text: string }[] }> = {
     'federated-learning-edge-raspberry-pi': {
       title: 'Federated Learning on Edge: Lessons from Raspberry Pi Deployment',
       date: '2025-01-15',
       readTime: '8 min read',
       tags: ['Federated Learning', 'Edge Computing', 'Raspberry Pi'],
-      content: `
-# Federated Learning on Edge: Lessons from Raspberry Pi Deployment
-
-Deploying federated learning models on resource-constrained devices presents unique challenges that go far beyond theoretical considerations. During my BS thesis work under Dr. Haroon R Lone, I implemented a custom Federated Convolutional Neural Network (FLCNN) on Raspberry Pi 5 devices to simulate real-world edge environments.
-
-## The Challenge
-
-Traditional federated learning assumes relatively stable network conditions and adequate computational resources. Reality on edge devices tells a different story. With only 4GB of RAM and ARM-based processors, Raspberry Pi devices push the boundaries of what's possible in distributed machine learning.
-
-## Architecture Design
-
-Our FLCNN architecture had to be lightweight yet effective. We designed a custom CNN with:
-
-- **Minimal parameter count**: Reduced model complexity while maintaining representational power
-- **Efficient communication protocols**: Implemented model compression to reduce bandwidth usage
-- **Asynchronous updates**: Handled intermittent connectivity gracefully
-
-## Key Findings
-
-After extensive testing with non-IID client data, we achieved **81.36% test accuracy** - outperforming several standard pre-trained models under the same federated setup. More importantly, we learned:
-
-### 1. Memory Management is Critical
-Standard PyTorch operations that work seamlessly on GPU-enabled machines can crash edge devices. We had to implement custom memory pooling and garbage collection strategies.
-
-### 2. Network Latency Matters More Than Bandwidth
-While model compression helped, the real bottleneck was connection establishment and maintenance. Persistent connections with heartbeat mechanisms proved essential.
-
-### 3. Non-IID Data Distribution Amplifies Edge Challenges
-The combination of statistical heterogeneity and resource constraints created convergence issues we hadn't anticipated in simulation.
-
-## Performance Analysis
-
-Our convergence analysis revealed interesting patterns:
-
-- **Communication overhead**: 40% reduction through gradient compression
-- **Training time**: 3x longer than centralized approach, but acceptable for privacy gains
-- **Energy consumption**: Manageable with proper scheduling algorithms
-
-## Looking Forward
-
-This work is progressing toward publication, and we're exploring:
-
-- Adaptive model architectures that adjust based on device capabilities
-- Hierarchical federated learning for multi-tier edge environments
-- Integration with differential privacy mechanisms
-
-The intersection of federated learning and edge computing opens fascinating research directions, particularly as IoT devices become more prevalent in sensitive applications.
-
----
-
-*This research was conducted as part of my BS thesis at IISER Bhopal under the supervision of Dr. Haroon R Lone. The work involved designing, implementing, and evaluating federated learning systems on actual Raspberry Pi hardware.*
-      `
+      sections: [
+        { text: 'Deploying federated learning models on resource-constrained devices is one of those things that sounds straightforward in theory and then humbles you in practice. During my BS thesis work under Dr. Haroon R Lone at IISER Bhopal, I implemented a custom Federated CNN (FLCNN) on Raspberry Pi 5 devices. Here is what I learned.' },
+        { heading: 'The Setup', text: 'We had a handful of Raspberry Pi 5 devices, each with 4GB RAM and ARM-based processors. The goal was to train a CNN on CIFAR-10 data distributed across these devices in a non-IID fashion. Traditional federated learning assumes decent network conditions and enough compute. Reality had other plans.' },
+        { heading: 'Architecture Decisions', text: 'Our FLCNN had to be small but effective. We focused on minimal parameter counts, efficient communication (model compression to save bandwidth), and asynchronous updates to handle the fact that WiFi on a Pi is not always reliable. We benchmarked against ShuffleNetV2 and showed competitive accuracy with much better deployability on constrained hardware.' },
+        { heading: 'What Actually Went Wrong (and Right)', text: 'We hit 81.36% test accuracy, which was genuinely satisfying. But getting there involved a lot of debugging. Standard PyTorch ops that work fine on a GPU machine can crash edge devices. We had to implement custom memory pooling. Network latency mattered more than bandwidth. And non-IID data distribution made convergence trickier than expected.' },
+        { heading: 'The Numbers', text: 'Communication overhead dropped by 40% with gradient compression. Training took about 3x longer than centralised, but thats the trade-off for keeping data on-device. Energy consumption was manageable with proper scheduling.' },
+        { heading: 'What is Next', text: 'We are exploring adaptive model architectures that adjust to device capabilities, hierarchical federated setups, and combining this with differential privacy. The intersection of federated learning and edge computing is full of interesting problems, and I am excited to keep digging.' },
+        { text: 'This work was done at IISER Bhopal under Dr. Haroon R Lone as part of my BS thesis.' }
+      ]
     },
     'ai-accessibility-coding-tools': {
       title: 'Making AI Accessible: Building Coding Tools for the Visually Impaired',
       date: '2024-12-20',
       readTime: '6 min read',
       tags: ['Accessibility', 'AI', 'Inclusion'],
-      content: `
-# Making AI Accessible: Building Coding Tools for the Visually Impaired
-
-During my research internship at ACM and NCAHT, IIT Delhi, I had the privilege of working on accessibility tools that bridge the gap between advanced AI technologies and inclusive design. This experience fundamentally changed how I think about technology development.
-
-## The Problem Space
-
-Programming is inherently visual - from syntax highlighting to debugging interfaces. For visually impaired developers, this creates significant barriers to entry and productivity. While screen readers exist, they often struggle with code structure and complex data visualizations.
-
-## Our Approach
-
-We developed an integrated platform combining:
-
-### AI-Powered Code Assistance
-- **Natural language code explanation**: Converting complex algorithms into clear, sequential descriptions
-- **Intelligent error detection**: Contextual debugging assistance through voice interfaces
-- **Code structure navigation**: Hierarchical code exploration optimized for screen readers
-
-### Accessible Data Visualization
-The most challenging aspect was making graphs and charts accessible. Our solution involved:
-
-- **Tactile diagram generation**: Converting visual data into physical representations
-- **Audio data sonification**: Mapping data patterns to audio frequencies and rhythms
-- **Structured text descriptions**: Comprehensive textual representations of visual elements
-
-## Technical Implementation
-
-We built the platform using:
-
-- **NVDA screen reader integration**: Deep hooks into the screen reader API for seamless interaction
-- **Flask-based backend**: Lightweight server handling AI inference and data processing
-- **Custom audio processing**: Real-time sonification algorithms for data representation
-
-## Key Challenges
-
-### 1. Cognitive Load Management
-Balancing information density with clarity proved difficult. Too much detail overwhelmed users; too little left them without context.
-
-### 2. Real-time Interaction
-Voice-based interfaces required careful timing and interruption handling to feel natural.
-
-### 3. Diverse User Needs
-Visual impairment exists on a spectrum. Our tools needed to accommodate varying levels of sight and different assistive technology preferences.
-
-## Impact and Learnings
-
-Working with visually impaired developers taught me:
-
-- **Inclusive design benefits everyone**: Features we built for accessibility improved the experience for all users
-- **Technology should adapt to users**: Not the other way around
-- **Collaboration is essential**: Direct feedback from the target community was invaluable
-
-## Future Directions
-
-This work continues to influence my research philosophy. I'm exploring:
-
-- Integration of accessibility considerations in federated learning systems
-- Voice-controlled interfaces for IoT device programming
-- Inclusive design principles in quantum computing education
-
----
-
-*This project was part of my summer internship at ACM and NCAHT, IIT Delhi, focusing on inclusive technology development and AI accessibility.*
-      `
+      sections: [
+        { text: 'During my summer internship at NCAHT, IIT Delhi (funded by ACM India), I worked on building accessible coding tools. It was one of those projects that changed how I think about technology entirely.' },
+        { heading: 'The Problem', text: 'Programming is visual. Syntax highlighting, debugging interfaces, data visualisations: all of it assumes you can see a screen. Screen readers exist, but they struggle with code structure and complex charts. For visually impaired developers, this creates real barriers.' },
+        { heading: 'What We Built', text: 'We created tools that integrate with screen readers and provide tactile feedback. Natural language code explanations that break down algorithms step by step. Intelligent error detection through voice interfaces. And the hardest part: making graphs and charts accessible through tactile diagrams, audio sonification, and structured text descriptions.' },
+        { heading: 'Lessons Learned', text: 'Cognitive load management was the biggest challenge. Too much audio information overwhelms users. Too little leaves them guessing. We ran user studies to find the right balance, and the feedback from actual users was invaluable. One thing that stuck with me: features built for accessibility often make things better for everyone.' },
+        { heading: 'Looking Back', text: 'This project was supervised by Dr. Piyush Chanana and Dr. Anupama J. It taught me that good technology adapts to its users, not the other way around. I still think about accessibility in every project I work on now.' }
+      ]
     },
     'privacy-preserving-activity-recognition': {
       title: 'Privacy-Preserving Activity Recognition: A Deep Dive',
       date: '2024-11-30',
       readTime: '10 min read',
       tags: ['Privacy', 'IoT', 'Machine Learning'],
-      content: `
-# Privacy-Preserving Activity Recognition: A Deep Dive
-
-How do you achieve 95.93% accuracy in activity recognition while providing formal privacy guarantees? This question drove my latest research project under Dr. Haroon R Lone, exploring the intersection of differential privacy and edge computing.
-
-## The Privacy-Utility Tradeoff
-
-Activity recognition systems traditionally require raw sensor data to be transmitted to central servers for processing. This creates significant privacy concerns - accelerometer and gyroscope data can reveal intimate details about a person's daily life, health conditions, and behavior patterns.
-
-## Our Edge-Based Solution
-
-We developed a system that processes sensitive data locally on IoT devices, adding carefully calibrated noise to preserve privacy while maintaining classification accuracy.
-
-### System Architecture
-
-**Local Processing Pipeline:**
-1. **Data Collection**: Multi-sensor fusion from accelerometers, gyroscopes, and magnetometers
-2. **Feature Extraction**: Edge-computed statistical features and frequency domain analysis
-3. **Noise Addition**: Differential privacy mechanisms applied at the feature level
-4. **Local Classification**: Lightweight neural network inference on-device
-
-### Differential Privacy Implementation
-
-Our privacy mechanism employed the Gaussian mechanism with:
-
-- **ε-differential privacy**: Formal privacy parameter controlling noise levels
-- **Adaptive noise scaling**: Dynamic adjustment based on data sensitivity
-- **Composition tracking**: Managing privacy budget across multiple queries
-
-## Technical Challenges
-
-### 1. Noise Calibration
-Too little noise compromises privacy; too much destroys utility. We developed adaptive algorithms that:
-
-- Analyze local data distribution characteristics
-- Adjust noise parameters based on classification confidence
-- Maintain privacy guarantees across device heterogeneity
-
-### 2. Resource Constraints
-IoT devices have limited computational and memory resources. Our optimizations included:
-
-- **Model quantization**: Reduced precision arithmetic for faster inference
-- **Feature selection**: Identifying minimal feature sets for maintained accuracy
-- **Efficient noise generation**: Hardware-accelerated random number generation
-
-### 3. Real-time Performance
-Activity recognition requires low-latency processing. We achieved this through:
-
-- **Sliding window optimization**: Efficient buffer management for continuous data streams
-- **Pipelined processing**: Overlapping computation and communication phases
-- **Predictive prefetching**: Anticipating computation needs based on activity patterns
-
-## Results and Analysis
-
-Our final system achieved:
-
-- **95.93% classification accuracy** on standard activity recognition benchmarks
-- **Formal ε-differential privacy** with ε = 1.0 (strong privacy guarantee)
-- **Sub-100ms inference latency** on ARM Cortex-A processors
-- **3x reduction in communication overhead** compared to centralized approaches
-
-### Privacy Analysis
-
-We evaluated privacy protection through:
-
-- **Membership inference attacks**: Attackers couldn't determine if specific data points were used in training
-- **Attribute inference resistance**: Personal characteristics remained hidden despite model outputs
-- **Composition analysis**: Privacy guarantees held across multiple interactions
-
-## Real-World Deployment
-
-Testing on embedded devices revealed practical considerations:
-
-### Hardware Variability
-Different IoT platforms exhibited varying noise characteristics and computational capabilities, requiring adaptive algorithms.
-
-### Environmental Factors
-Real-world deployment introduced sensor noise and environmental variations not present in laboratory settings.
-
-### User Behavior Patterns
-Long-term studies showed that privacy preferences and activity patterns change over time, necessitating adaptive privacy mechanisms.
-
-## Looking Forward
-
-This research opens several promising directions:
-
-### Federated Privacy
-Combining our edge-based approach with federated learning could enable collaborative model improvement while maintaining individual privacy.
-
-### Multi-Modal Privacy
-Extending privacy guarantees to other sensor modalities (audio, visual, environmental) presents interesting challenges.
-
-### Dynamic Privacy
-Developing systems that adapt privacy parameters based on context and user preferences represents the next frontier.
-
-## Conclusion
-
-Privacy-preserving activity recognition demonstrates that we don't have to choose between privacy and utility. With careful system design and theoretical foundations, we can achieve both strong privacy guarantees and high classification accuracy.
-
-The key insight from this work is that privacy is not just about adding noise - it's about rethinking entire system architectures to minimize data exposure while maximizing utility.
-
----
-
-*This research was conducted at IISER Bhopal under Dr. Haroon R Lone's supervision, with a focus on practical deployment of differential privacy mechanisms in resource-constrained environments.*
-      `
+      sections: [
+        { text: 'How do you get 95.93% accuracy in activity recognition while providing formal privacy guarantees? That was the question that drove this project under Dr. Haroon R Lone at IISER Bhopal.' },
+        { heading: 'Why Privacy Matters Here', text: 'Activity recognition systems usually send raw sensor data to central servers. But accelerometer and gyroscope data can reveal a lot about a person: health conditions, daily routines, behaviour patterns. We wanted to keep that data on the device.' },
+        { heading: 'Our Approach', text: 'We built an edge-based system that processes data locally on IoT devices (Raspberry Pi 4B with ADXL sensors). The key was adding carefully calibrated noise using the Gaussian mechanism for epsilon-differential privacy. Too little noise and privacy is compromised. Too much and the model just predicts "maybe" for everything.' },
+        { heading: 'Technical Challenges', text: 'Noise calibration was tricky. We developed adaptive algorithms that analyse local data distribution and adjust noise based on classification confidence. Resource constraints meant we needed model quantisation, smart feature selection, and hardware-accelerated random number generation. And all of this had to run in real-time with sub-100ms latency.' },
+        { heading: 'Results', text: '95.93% classification accuracy with epsilon = 1.0 (strong privacy). Sub-100ms inference on ARM processors. 3x reduction in communication overhead compared to centralised approaches. We also tested against membership inference attacks and attribute inference, and the privacy guarantees held up.' },
+        { heading: 'Takeaway', text: 'You do not have to choose between privacy and utility. With careful system design, you can have both. The key insight is that privacy is not just about adding noise; it is about rethinking the entire architecture to minimise data exposure while maximising what the model can learn.' }
+      ]
+    },
+    'tifr-iisc-cs-programs': {
+      title: "From TIFR to IISc: My Journey Through India's Premier CS Programs",
+      date: '2024-10-15',
+      readTime: '5 min read',
+      tags: ['Academia', 'Research', 'Personal'],
+      sections: [
+        { text: 'Getting selected for TIFR Vigyan Vidushi 2024 (32 out of 1000+ applicants) and the IISc Theory CS Winter School were some of the most formative experiences of my academic life. Here is what it was like.' },
+        { heading: 'TIFR Vigyan Vidushi', text: 'Three weeks in Mumbai at TIFR, learning about error correcting codes, algorithms on graphs, information theory, quantum computing, and spectral graph theory. The pace was intense. Everyone around me was brilliant. I will not pretend I understood everything on the first pass, but the discussions during breaks were often as valuable as the lectures.' },
+        { heading: 'IISc Theory CS Winter School', text: 'Matching theory and differential privacy at IISc Bengaluru. This one hit closer to my research interests. The differential privacy sessions directly influenced my thesis work. Getting to interact with world-class researchers in a small setting was incredible.' },
+        { heading: 'IISc Summer School 2023', text: 'My first real exposure to cutting-edge research. Signal processing, ML, AI, and power systems. Looking back, this is where I started to get serious about research as a career path.' },
+        { heading: 'What I Took Away', text: 'These programs taught me that being the least experienced person in the room is a gift. You learn faster. You ask better questions. And you realise that every researcher you admire was once exactly where you are now.' }
+      ]
+    },
+    'quantum-computing-grovers-algorithm': {
+      title: "Quantum Computing Meets SAT: Implementing Grover's Algorithm",
+      date: '2024-09-28',
+      readTime: '12 min read',
+      tags: ['Quantum Computing', 'Algorithms', 'Qiskit'],
+      sections: [
+        { text: "For Dr. Ankur Raina's quantum CS course, I implemented Grover's Algorithm for SAT problems in Qiskit. It was my first serious quantum computing project, and it was both exciting and humbling." },
+        { heading: 'The Idea', text: "Grover's Algorithm provides a quadratic speedup over classical search for unstructured problems. For SAT, you design an oracle that marks solutions, then use amplitude amplification to boost their probability. In theory, elegant. In practice, building the oracle circuit is where the real work happens." },
+        { heading: 'Implementation', text: 'I designed oracle-based quantum circuits that encode SAT clauses, implemented the diffusion operator for amplitude amplification, and ran simulations in Qiskit. The moment when the target states actually showed up with high probability in the measurement results was genuinely thrilling.' },
+        { heading: 'Challenges', text: "Quantum circuit design requires a different kind of thinking. You cannot just debug by printing values. State vector inspection and careful gate-by-gate verification were essential. Also, Qiskit's documentation is good but quantum computing concepts take a while to really click." },
+        { heading: 'What I Learned', text: 'Quantum computing is not magic. It is rigorous mathematics and careful engineering. The quadratic speedup is real but the overhead of circuit construction matters. I came out of this project with a much deeper appreciation for both the promise and the current limitations of quantum computing.' }
+      ]
+    },
+    'teaching-verilog': {
+      title: 'The Art of Teaching Verilog: What Students Taught Me',
+      date: '2024-08-10',
+      readTime: '7 min read',
+      tags: ['Teaching', 'Verilog', 'Digital Design'],
+      sections: [
+        { text: 'Being a Teaching Assistant for Digital Circuits and Systems (ECS 326/676) under Dr. Santanu Talukder was a crash course in communication. Explaining Verilog HDL to students who have never seen a hardware description language before is harder than writing the code yourself.' },
+        { heading: 'Teaching Approach', text: 'I taught Verilog from scratch: syntax, simulation, and hardware synthesis. I prepared exercises, lab assignments, and spent a lot of time in one-on-one debugging sessions. The debugging sessions were honestly the most educational part, for both me and the students.' },
+        { heading: 'What Surprised Me', text: 'Students ask questions you never thought about. "Why does this work in simulation but not on the FPGA?" is a question that forces you to really understand the difference between behavioural and structural modelling. Teaching made me a better engineer.' },
+        { heading: 'Verilog Bugs Are Special', text: 'Software bugs crash your program. Verilog bugs synthesise into hardware that does something confidently wrong. Helping students debug these issues taught me patience and the value of clear, systematic thinking.' },
+        { heading: 'Final Thoughts', text: 'If you ever get the chance to teach or TA, take it. You will learn more about your subject than you expect, and the satisfaction of seeing a student finally get it is hard to beat.' }
+      ]
     }
   };
 
-  const post = posts[slug as keyof typeof posts];
+  const post = posts[slug as string];
 
   if (!post) {
     return (
@@ -254,84 +97,78 @@ The key insight from this work is that privacy is not just about adding noise - 
         <section className="terminal-card text-center">
           <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
           <p className="text-muted-foreground mb-6">
-            The blog post you're looking for doesn't exist or has been moved.
+            This blog post doesn't exist yet. Maybe I'll write it someday!
           </p>
-          <Link to="/blog" className="btn-terminal">
-            Back to Blog
-          </Link>
+          <Link to="/blog" className="btn-terminal">Back to Blog</Link>
         </section>
       </div>
     );
   }
 
   const getTagColor = (tag: string) => {
-    const colors = {
-      'Federated Learning': 'bg-blue-500/10 text-blue-400',
-      'Edge Computing': 'bg-green-500/10 text-green-400',
-      'Privacy': 'bg-purple-500/10 text-purple-400',
-      'Accessibility': 'bg-orange-500/10 text-orange-400',
-      'IoT': 'bg-cyan-500/10 text-cyan-400',
-      'Machine Learning': 'bg-pink-500/10 text-pink-400',
-      'Raspberry Pi': 'bg-red-500/10 text-red-400',
-      'AI': 'bg-yellow-500/10 text-yellow-400',
-      'Inclusion': 'bg-indigo-500/10 text-indigo-400'
+    const colors: Record<string, string> = {
+      'Federated Learning': 'bg-blue-500/10 text-blue-600',
+      'Edge Computing': 'bg-green-500/10 text-green-600',
+      'Privacy': 'bg-purple-500/10 text-purple-600',
+      'Accessibility': 'bg-orange-500/10 text-orange-600',
+      'IoT': 'bg-cyan-500/10 text-cyan-600',
+      'Machine Learning': 'bg-pink-500/10 text-pink-600',
+      'Raspberry Pi': 'bg-red-500/10 text-red-600',
+      'AI': 'bg-yellow-500/10 text-yellow-600',
+      'Inclusion': 'bg-indigo-500/10 text-indigo-600',
+      'Quantum Computing': 'bg-pink-500/10 text-pink-600',
+      'Algorithms': 'bg-green-500/10 text-green-600',
+      'Qiskit': 'bg-blue-500/10 text-blue-600',
+      'Academia': 'bg-purple-500/10 text-purple-600',
+      'Research': 'bg-cyan-500/10 text-cyan-600',
+      'Personal': 'bg-red-500/10 text-red-600',
+      'Teaching': 'bg-yellow-500/10 text-yellow-600',
+      'Verilog': 'bg-orange-500/10 text-orange-600',
+      'Digital Design': 'bg-green-500/10 text-green-600',
     };
-    return colors[tag as keyof typeof colors] || 'bg-muted text-muted-foreground';
+    return colors[tag] || 'bg-muted text-muted-foreground';
   };
 
   return (
     <div className="space-y-8">
-      {/* Header */}
-      <section className="terminal-card">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mb-6">
-          <ArrowLeft className="w-4 h-4" />
-          Back to Blog
-        </Link>
-        
-        <h1 className="text-3xl font-bold gradient-text mb-4">{post.title}</h1>
-        
-        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
-          <div className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
-            <span>{new Date(post.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}</span>
+      <FadeIn>
+        <section className="terminal-card">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors mb-6">
+            <ArrowLeft className="w-4 h-4" /> Back to Blog
+          </Link>
+          <h1 className="text-3xl font-bold gradient-text mb-4">{post.title}</h1>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
+            <div className="flex items-center gap-1">
+              <Calendar className="w-4 h-4" />
+              <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="w-4 h-4" />
+              <span>{post.readTime}</span>
+            </div>
           </div>
-          <div className="flex items-center gap-1">
-            <Clock className="w-4 h-4" />
-            <span>{post.readTime}</span>
+          <div className="flex flex-wrap gap-2">
+            {post.tags.map(tag => (
+              <span key={tag} className={`text-xs px-2 py-1 rounded-md ${getTagColor(tag)}`}>{tag}</span>
+            ))}
           </div>
-        </div>
-        
-        <div className="flex flex-wrap gap-2">
-          {post.tags.map(tag => (
-            <span key={tag} className={`text-xs px-2 py-1 rounded-md ${getTagColor(tag)}`}>
-              {tag}
-            </span>
-          ))}
-        </div>
-      </section>
+        </section>
+      </FadeIn>
 
-      {/* Content */}
-      <article className="terminal-card prose prose-invert max-w-none">
-        <div 
-          className="text-muted-foreground leading-relaxed"
-          dangerouslySetInnerHTML={{ 
-            __html: post.content
-              .replace(/\n/g, '<br>')
-              .replace(/#{1,6}\s/g, match => {
-                const level = match.trim().length;
-                return `<h${level} class="text-${4-level}xl font-bold mt-8 mb-4 text-foreground">`;
-              })
-              .replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>')
-              .replace(/\*(.*?)\*/g, '<em>$1</em>')
-              .replace(/`(.*?)`/g, '<code class="bg-muted px-1 rounded text-accent">$1</code>')
-              .replace(/---/g, '<hr class="my-8 border-border">')
-          }}
-        />
-      </article>
+      <FadeIn delay={0.1}>
+        <article className="terminal-card">
+          <div className="space-y-6 text-muted-foreground leading-relaxed">
+            {post.sections.map((section, i) => (
+              <div key={i}>
+                {section.heading && (
+                  <h2 className="text-xl font-bold text-foreground mb-3 mt-2">{section.heading}</h2>
+                )}
+                <p>{section.text}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      </FadeIn>
     </div>
   );
 };
