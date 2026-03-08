@@ -35,6 +35,22 @@ const Places = () => {
       category: 'Research',
       memories: 'Delhi in summer is hot, but the work was worth every sweaty commute. Made lifelong friends here.'
     },
+    {
+      name: 'ACM India Summer School: AI for Social Good',
+      location: 'IIT Gandhinagar, Gujarat',
+      date: 'June 2025',
+      description: 'AI for Social Impact, Climate Modelling, Remote Sensing, Health Systems, Deep Learning, GNNs.',
+      category: 'Academic',
+      memories: 'A brilliant mix of AI and real-world impact. The campus was gorgeous too.'
+    },
+    {
+      name: 'Computational Challenges in Data Privacy',
+      location: 'IIT Delhi, New Delhi',
+      date: 'July 2025',
+      description: 'Privacy Workshop: Cryptography, Differential Privacy, Security.',
+      category: 'Academic',
+      memories: 'Back in Delhi! This time for privacy research. Full circle from my ACM internship days.'
+    },
   ];
 
   const getCategoryColor = (category: string) => {
@@ -81,18 +97,6 @@ const Places = () => {
         ))}
       </StaggerContainer>
 
-      <FadeIn>
-        <section className="section-card">
-          <h2 className="text-xl font-semibold mb-3 text-foreground">Coming Up</h2>
-          <p className="text-sm text-muted-foreground mb-3">
-            Always planning the next trip. Some are for research, some are just because.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="tag">IIT Gandhinagar (ACM India Summer School, June 2025)</span>
-            <span className="tag">IIT Delhi (Privacy Workshop, July 2025)</span>
-          </div>
-        </section>
-      </FadeIn>
     </div>
   );
 };

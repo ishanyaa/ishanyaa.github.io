@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Footer = () => {
@@ -38,9 +38,6 @@ const Footer = () => {
             </a>
             <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-4 h-4" />
-            </a>
-            <a href="mailto:ishanya.inbox@gmail.com" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
-              <Mail className="w-4 h-4" />
             </a>
           </div>
         </div>

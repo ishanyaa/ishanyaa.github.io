@@ -14,7 +14,7 @@ const About = () => {
                 alt="Ishanya at the IISER Bhopal garden"
                 className="w-44 h-44 rounded-2xl object-cover border-2 border-primary/20 shadow-lg"
               />
-              <p className="text-xs text-muted-foreground text-center mt-2 italic">
+              <p className="text-xs text-muted-foreground text-center mt-2 italic max-w-[11rem] mx-auto">
                 The garden at IISER Bhopal, near the academic building. They plant so many flowers during winter.
                 The warm sun, the bees buzzing around, and good people to chat with about ideas. Core memory.
               </p>
@@ -45,8 +45,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
-                <a href="mailto:ishanya.inbox@gmail.com" className="btn-outline text-sm">Email Me</a>
-                <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">Contact Me on LinkedIn</a>
                 <a href="https://github.com/ishanyaa" target="_blank" rel="noopener noreferrer" className="btn-outline text-sm">GitHub</a>
               </div>
             </SlideIn>
@@ -80,9 +79,9 @@ const About = () => {
           <div className="space-y-6">
             <FadeIn delay={0.1}>
               <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
-                <h3 className="font-medium text-primary mb-1">Researcher (Sept 2025 onwards)</h3>
+                <h3 className="font-medium text-primary mb-1">Industrial Research (Sept 2025 onwards)</h3>
                 <p className="text-sm text-muted-foreground">
-                  Working on privacy-sensitive intelligent systems. Built a defect detection pipeline
+                  Built a defect detection pipeline
                   that reduced memory footprint by ~90% and improved accuracy to over 98%. The work ranked 2nd in a company-wide research competition,
                   which was a nice surprise!
                 </p>

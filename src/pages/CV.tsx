@@ -5,10 +5,10 @@ const CV = () => {
   const experiences = [
     {
       role: 'Researcher',
-      organization: 'Industry Research Lab',
+      organization: 'Industrial Research Lab',
       location: 'Bengaluru, India',
       period: 'Sept 2025 - Present',
-      area: 'Privacy-sensitive intelligent systems',
+      area: 'Defect Detection & Edge AI',
       highlights: [
         'Built a hierarchical sensor-vision defect detection pipeline for a robotic assembly line',
         'Reduced memory footprint by ~90% and improved accuracy from ~54% to >98% using mixture-of-experts models',
@@ -133,8 +133,8 @@ const CV = () => {
               <h1 className="text-3xl font-bold text-foreground mb-1">Curriculum Vitae</h1>
               <p className="text-muted-foreground">BS (EECS), IISER Bhopal</p>
             </div>
-            <a href="mailto:ishanya.inbox@gmail.com" className="btn-outline flex items-center gap-2">
-              <ExternalLink className="w-4 h-4" /> Contact
+            <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-outline flex items-center gap-2">
+              <ExternalLink className="w-4 h-4" /> Contact via LinkedIn
             </a>
           </div>
         </section>
