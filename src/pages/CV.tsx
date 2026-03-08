@@ -8,7 +8,7 @@ const CV = () => {
       organization: 'Industrial Research Lab',
       location: 'Bengaluru, India',
       period: 'Sept 2025 - Present',
-      area: 'Defect Detection & Edge AI',
+      area: 'Intelligent Systems',
       highlights: [
         'Built a hierarchical sensor-vision defect detection pipeline for a robotic assembly line',
         'Reduced memory footprint by ~90% and improved accuracy from ~54% to >98% using mixture-of-experts models',
@@ -32,8 +32,7 @@ const CV = () => {
         'Built a lightweight CNN (FLCNN) for CIFAR-10 under non-IID data and intermittent connectivity',
         'Benchmarked federated vs centralised training against ShuffleNetV2',
         'Developed a local differential privacy activity recognition pipeline (95.93% accuracy)',
-        'Co-developed EchoCare, a proof-of-concept for a low-cost AI-enabled digital stethoscope',
-        'Proposed a federated learning training strategy for continual model improvement without centralising patient data'
+        'Co-developed EchoCare, a low-cost AI-enabled digital stethoscope, and proposed a federated learning training strategy for continual model improvement without centralising patient data'
       ]
     },
     {
@@ -80,7 +79,8 @@ const CV = () => {
       highlights: [
         'Built AI-assisted accessible coding tools with screen readers and tactile feedback',
         'Designed accessible data visualisation interfaces and conducted user studies',
-        'ACM India and NCAHT funded project'
+        'ACM India and NCAHT funded project',
+        'Interested to know more? Feel free to reach out via LinkedIn'
       ]
     },
     {
@@ -107,7 +107,7 @@ const CV = () => {
     { title: 'ACM India Summer Fellowship Grant (NCAHT, IIT Delhi)', detail: 'Top ~0.5%', year: '2024' },
     { title: 'Udacity Bertelsmann Next Gen Tech Booster Scholarship', detail: 'Top ~2%', year: '2024' },
     { title: 'Professor Ram Kumar Scholarship, EDM Conference', detail: 'Global', year: '2023' },
-    { title: 'All India Rank 160, NTA IIT-JEE Paper 2', detail: 'Top ~1%', year: '2021' },
+    
   ];
 
   const skills = {
@@ -155,7 +155,7 @@ const CV = () => {
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-1">
               <span>Aug 2021 - June 2025</span>
-              <span>GPA: 8.61 / 10</span>
+              
             </div>
           </div>
         </section>

@@ -130,18 +130,6 @@ const About = () => {
                 </ul>
               </div>
             </SlideIn>
-            <SlideIn direction="right">
-              <div className="p-4 rounded-xl bg-accent/5">
-                <h3 className="font-medium text-foreground mb-3">Currently exploring</h3>
-                <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>AI ethics through Turing College (EU-funded)</li>
-                  <li>AWS Cloud Women Mentoring Program alumni</li>
-                  <li>Upcoming: ACM India Summer School at IIT Gandhinagar</li>
-                  <li>Upcoming: Privacy Workshop at IIT Delhi</li>
-                  <li>Always looking for the next interesting problem</li>
-                </ul>
-              </div>
-            </SlideIn>
           </div>
         </section>
       </FadeIn>
