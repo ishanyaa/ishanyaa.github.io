@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/ishanya-portfolio/",
+  base: process.env.GITHUB_PAGES ? "/ishanya-portfolio/" : "/",
 }));
 
 
