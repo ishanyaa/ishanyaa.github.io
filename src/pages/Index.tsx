@@ -12,7 +12,7 @@ const Index = () => {
             <img src={profileImage} alt="Ishanya" className="w-24 h-24 rounded-2xl object-cover border-2 border-primary/20 shadow-lg" />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-2 text-foreground">
-                Hi, I'm Ishanya! 👋
+                Hi, I'm Ishanya!
               </h1>
               <p className="text-muted-foreground text-lg">Researcher, tinkerer, and perpetual question-asker.</p>
             </div>
@@ -53,14 +53,14 @@ const Index = () => {
           <h2 className="text-xl font-semibold mb-6 text-foreground">Explore</h2>
           <StaggerContainer className="grid sm:grid-cols-2 gap-4">
             {[
-              { to: '/cv', title: 'Experience', desc: 'Research positions, awards, and my journey so far', emoji: '📄' },
-              { to: '/blog', title: 'Blog', desc: 'Personal stories and things I find fascinating', emoji: '✍️' },
-              { to: '/places', title: 'Places', desc: 'Research visits and conferences around India', emoji: '🌏' },
-              { to: '/misc', title: 'Fun Stuff', desc: 'Art, photos, random thoughts, and the lighter side', emoji: '🎨' },
+              { to: '/cv', title: 'Experience', desc: 'Research positions, awards, and my journey so far' },
+              { to: '/blog', title: 'Blog', desc: 'Personal stories and things I find fascinating' },
+              { to: '/places', title: 'Places', desc: 'Research visits and conferences around India' },
+              { to: '/misc', title: 'Fun Stuff', desc: 'Art, photos, random thoughts, and the lighter side' },
             ].map(item => (
               <StaggerItem key={item.to}>
                 <Link to={item.to} className="section-card section-card-hover block p-5">
-                  <h3 className="font-medium text-foreground mb-1">{item.emoji} {item.title}</h3>
+                  <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </Link>
               </StaggerItem>

@@ -6,12 +6,12 @@ import msrAiHealth from '@/assets/msr-aihealth.jpeg';
 
 const Misc = () => {
   const quickFacts = [
-    'Coffee-to-code ratio: approximately 2:1 ☕',
-    'Gold Medal in Discus Throw (SANGHARSH Sports 2023 & 2024). Yes, really. 🥇',
+    'Coffee-to-code ratio: approximately 2:1',
+    'Gold Medal in Discus Throw (SANGHARSH Sports 2023 & 2024). Yes, really.',
     'JEE Paper 2 AIR 160, which means I can technically do non-CS things too',
-    'Former Peer Counselor at IISER Bhopal, because listening is a skill too 🤝',
-    'Navigation skill: excellent with Google Maps, questionable without 🗺️',
-    'Has read more research papers than novels (working on fixing that) 📚',
+    'Former Peer Counselor at IISER Bhopal, because listening is a skill too',
+    'Navigation skill: excellent with Google Maps, questionable without',
+    'Has read more research papers than novels (working on fixing that)',
   ];
 
   const initiatives = [
@@ -66,7 +66,7 @@ const Misc = () => {
     <div className="space-y-8">
       <FadeIn>
         <section>
-          <h1 className="text-3xl font-bold text-foreground mb-3">Misc 🎨</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-3">Misc</h1>
           <p className="text-muted-foreground">
             The fun, experimental, and slightly chaotic side of things.
             Random thoughts, initiatives, art, and evidence that I don't take myself too seriously.
@@ -77,7 +77,7 @@ const Misc = () => {
       {/* Graduation */}
       <FadeIn>
         <section className="section-card fun-gradient">
-          <h2 className="text-xl font-semibold mb-4 text-foreground">🎓 Graduated!</h2>
+          <h2 className="text-xl font-semibold mb-4 text-foreground">Graduated!</h2>
           <div className="flex flex-col sm:flex-row gap-6 items-center">
             <img src={graduationPic} alt="Ishanya at IISER Bhopal graduation" className="w-full sm:w-64 rounded-xl shadow-md border border-border" />
             <div>
@@ -93,7 +93,7 @@ const Misc = () => {
       {/* AIxHealth Event */}
       <FadeIn>
         <section className="section-card">
-          <h2 className="text-xl font-semibold mb-4 text-foreground">🏥 AIxHealth: Bridging Research and Practice</h2>
+          <h2 className="text-xl font-semibold mb-4 text-foreground">AIxHealth: Bridging Research and Practice</h2>
           <div className="flex flex-col sm:flex-row gap-6 items-center">
             <img src={msrAiHealth} alt="Ishanya at the AIxHealth pre-summit event" className="w-full sm:w-64 rounded-xl shadow-md border border-border" />
             <div>
@@ -115,7 +115,7 @@ const Misc = () => {
       {/* Art & Pics */}
       <FadeIn>
         <section className="section-card">
-          <h2 className="text-xl font-semibold mb-4 text-foreground">🎨 Art & Pics</h2>
+          <h2 className="text-xl font-semibold mb-4 text-foreground">Art & Pics</h2>
           <p className="text-muted-foreground mb-4 text-sm">
             When I'm not reading papers or writing code, I sometimes doodle. Here are a couple of pieces I'm fond of.
           </p>
@@ -183,7 +183,7 @@ const Misc = () => {
 
       <FadeIn>
         <section className="section-card">
-          <h2 className="text-xl font-semibold mb-4 text-foreground">Research Humor 😄</h2>
+          <h2 className="text-xl font-semibold mb-4 text-foreground">Research Humor</h2>
           <div className="space-y-3">
             {memes.map((meme, index) => (
               <div key={index} className="p-4 bg-primary/5 rounded-lg border border-primary/10">

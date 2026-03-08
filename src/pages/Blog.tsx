@@ -42,7 +42,7 @@ const Blog = () => {
     <div className="space-y-8">
       <FadeIn>
         <section>
-          <h1 className="text-3xl font-bold text-foreground mb-3">Blog ✍️</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-3">Blog</h1>
           <p className="text-muted-foreground">
             Stories from my journey, things I'm learning, and topics I find fascinating.
             I try to write honestly about my experiences, the good parts and the confusing parts.
