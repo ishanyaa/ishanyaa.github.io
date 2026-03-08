@@ -10,11 +10,6 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               {new Date().getFullYear()} Ishanya
             </p>
-            {visitorInfo && (
-              <p className="text-xs text-muted-foreground mt-1">
-                Visitor #{visitorInfo.count} from {visitorInfo.country}
-              </p>
-            )}
           </div>
           <div className="flex gap-4">
             <a href="https://github.com/ishanyaa" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">

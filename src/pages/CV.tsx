@@ -79,7 +79,8 @@ const CV = () => {
       highlights: [
         'Built AI-assisted accessible coding tools with screen readers and tactile feedback',
         'Designed accessible data visualisation interfaces and conducted user studies',
-        'ACM India and NCAHT funded project'
+        'ACM India and NCAHT funded project',
+        'Interested to know more? Feel free to reach out via LinkedIn'
       ]
     },
     {
