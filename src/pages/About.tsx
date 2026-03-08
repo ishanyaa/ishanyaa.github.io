@@ -1,42 +1,46 @@
 import { GraduationCap, MapPin } from 'lucide-react';
-import profileImage from '@/assets/profile-image.jpg';
+import profileImage from '@/assets/ishanya-garden.jpeg';
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from '@/components/MotionWrapper';
 
 const About = () => {
   return (
     <div className="space-y-12">
       <FadeIn>
-        <section className="section-card">
+        <section className="section-card fun-gradient">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <SlideIn direction="left" className="flex-shrink-0">
               <img
                 src={profileImage}
-                alt="Ishanya"
-                className="w-40 h-40 rounded-full object-cover border-2 border-border"
+                alt="Ishanya at the IISER Bhopal garden"
+                className="w-44 h-44 rounded-2xl object-cover border-2 border-primary/20 shadow-lg"
               />
+              <p className="text-xs text-muted-foreground text-center mt-2 italic">
+                The garden at IISER Bhopal, near the academic building. They plant so many flowers during winter.
+                The warm sun, the bees buzzing around, and good people to chat with about ideas. Core memory.
+              </p>
             </SlideIn>
             <SlideIn direction="right" className="flex-1 text-center md:text-left">
-              <h1 className="text-3xl font-bold mb-2 text-foreground">Ishanya</h1>
+              <h1 className="text-3xl font-bold mb-2 text-foreground">Hey, I'm Ishanya! 👋</h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-                Hey! I'm a recent BS graduate from IISER Bhopal (Electrical Engineering and Computer Science).
-                I'm deeply curious about AI safety, privacy-preserving AI, and how we can govern AI systems responsibly.
+                I recently graduated from IISER Bhopal (BS in EECS, Aug 2025). I'm deeply curious about
+                AI safety, privacy-preserving AI, and how we can govern AI systems responsibly.
                 I love to research, tinker, and ask "why?" a lot. The more I read, the more I realise how much there is to learn,
-                and honestly, that's what makes it exciting.
+                and honestly, that's what makes it exciting!
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 I'm looking to pursue an MS/PhD and dig deeper into these questions. If any of this sounds interesting to you,
-                or if you just want to chat, feel free to {' '}
-                <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="link-accent">
+                or if you just want to chat about research, life, or anything really, feel free to{' '}
+                <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="link-accent font-medium">
                   drop me a message on LinkedIn
-                </a>! I'd love to hear from you.
+                </a>! I'd genuinely love to hear from you.
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <GraduationCap className="w-4 h-4" />
+                  <GraduationCap className="w-4 h-4 text-primary" />
                   <span>IISER Bhopal (BS, EECS)</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <MapPin className="w-4 h-4" />
+                  <MapPin className="w-4 h-4 text-primary" />
                   <span>India</span>
                 </div>
               </div>
@@ -55,12 +59,12 @@ const About = () => {
           <h2 className="text-2xl font-semibold mb-6 text-foreground">What Gets Me Excited</h2>
           <StaggerContainer className="grid md:grid-cols-3 gap-6">
             {[
-              { title: 'Privacy-Preserving AI', desc: 'Federated learning, differential privacy, and making sure your data stays yours. How do we build AI that respects people?' },
+              { title: 'Privacy-Preserving AI', desc: 'Federated learning, differential privacy, and making sure your data stays yours. How do we build AI that actually respects people?' },
               { title: 'AI Safety & Governance', desc: 'How do we make AI systems trustworthy? What does fairness look like in practice? These questions keep me up at night (in a good way).' },
               { title: 'Accessible Tech', desc: 'Built coding tools for visually impaired students during my ACM internship at IIT Delhi. Tech should work for everyone, period.' },
             ].map((item) => (
               <StaggerItem key={item.title}>
-                <div>
+                <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
                   <h3 className="font-medium text-foreground mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
@@ -75,19 +79,18 @@ const About = () => {
           <h2 className="text-2xl font-semibold mb-6 text-foreground">The Journey So Far</h2>
           <div className="space-y-6">
             <FadeIn delay={0.1}>
-              <div>
+              <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
                 <h3 className="font-medium text-primary mb-1">Researcher (Sept 2025 onwards)</h3>
                 <p className="text-sm text-muted-foreground">
                   Working on privacy-sensitive intelligent systems. Built a defect detection pipeline
-                  that reduced memory footprint by ~90% and improved accuracy to over 98%. Deployed inference
-                  using ONNX Runtime on constrained devices. The work ranked 2nd in a company-wide research competition,
+                  that reduced memory footprint by ~90% and improved accuracy to over 98%. The work ranked 2nd in a company-wide research competition,
                   which was a nice surprise!
                 </p>
               </div>
             </FadeIn>
             <FadeIn delay={0.15}>
-              <div>
-                <h3 className="font-medium text-primary mb-1">BS Thesis at IISER Bhopal</h3>
+              <div className="p-4 rounded-lg border-l-4 border-accent bg-accent/5">
+                <h3 className="font-medium text-accent mb-1">BS Thesis at IISER Bhopal</h3>
                 <p className="text-sm text-muted-foreground">
                   Worked with{' '}
                   <a href="https://loneharoon.github.io/" target="_blank" rel="noopener noreferrer" className="link-accent">Dr. Haroon Rashid Lone</a>{' '}
@@ -98,23 +101,12 @@ const About = () => {
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <div>
+              <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
                 <h3 className="font-medium text-primary mb-1">ACM Internship at IIT Delhi (Summer 2024)</h3>
                 <p className="text-sm text-muted-foreground">
                   Built AI-assisted accessible coding tools at NCAHT. Worked with screen readers, tactile feedback,
                   and accessible data visualisation. Conducted user studies to test if our stuff was actually useful.
                   This one changed how I think about technology.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.25}>
-              <div>
-                <h3 className="font-medium text-primary mb-1">Research Intern at IISER Bhopal (2024-2025)</h3>
-                <p className="text-sm text-muted-foreground">
-                  Worked with{' '}
-                  <a href="https://sites.google.com/site/santanutalukderiiscnanoscience/principal-investigator" target="_blank" rel="noopener noreferrer" className="link-accent">Dr. Santanu Talukder</a>{' '}
-                  on intelligent sensing. Built an RTD-based MEMS sensing system and co-developed SightSync,
-                  an assistive wearable for visually impaired users (IC-MNSS 2024 finalist at IISc).
                 </p>
               </div>
             </FadeIn>
@@ -127,25 +119,29 @@ const About = () => {
           <h2 className="text-2xl font-semibold mb-6 text-foreground">Beyond Research</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <SlideIn direction="left">
-              <h3 className="font-medium text-foreground mb-3">Some things I'm proud of</h3>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
-                <li>Silver Medal in Shot Put</li>
-                <li>JEE Paper 2 All India Rank 160</li>
-                <li>Founded Arivu India and Uncharted Chapters for educational access</li>
-                <li>Peer Counselor at IISER Bhopal (2022-2024)</li>
-                <li>Editor at Chrysalis Club, IISER Bhopal's science magazine</li>
-              </ul>
+              <div className="p-4 rounded-xl bg-primary/5">
+                <h3 className="font-medium text-foreground mb-3">Some things I'm proud of</h3>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>🥇 Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
+                  <li>🥈 Silver Medal in Shot Put</li>
+                  <li>🎯 JEE Paper 2 All India Rank 160</li>
+                  <li>📚 Founded Arivu India and Uncharted Chapters for educational access</li>
+                  <li>🤝 Peer Counselor at IISER Bhopal (2022-2024)</li>
+                  <li>✍️ Editor at Chrysalis Club, IISER Bhopal's science magazine</li>
+                </ul>
+              </div>
             </SlideIn>
             <SlideIn direction="right">
-              <h3 className="font-medium text-foreground mb-3">Currently exploring</h3>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>AI ethics through Turing College (EU-funded)</li>
-                <li>AWS Cloud Women Mentoring Program alumni</li>
-                <li>Upcoming: ACM India Summer School at IIT Gandhinagar</li>
-                <li>Upcoming: Privacy Workshop at IIT Delhi</li>
-                <li>Always looking for the next interesting problem</li>
-              </ul>
+              <div className="p-4 rounded-xl bg-accent/5">
+                <h3 className="font-medium text-foreground mb-3">Currently exploring</h3>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>📖 AI ethics through Turing College (EU-funded)</li>
+                  <li>☁️ AWS Cloud Women Mentoring Program alumni</li>
+                  <li>🏫 Upcoming: ACM India Summer School at IIT Gandhinagar</li>
+                  <li>🔐 Upcoming: Privacy Workshop at IIT Delhi</li>
+                  <li>🔍 Always looking for the next interesting problem</li>
+                </ul>
+              </div>
             </SlideIn>
           </div>
         </section>

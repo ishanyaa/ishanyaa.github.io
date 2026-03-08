@@ -1,15 +1,22 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/MotionWrapper';
+import profileImage from '@/assets/ishanya-garden.jpeg';
 
 const Index = () => {
   return (
     <div className="space-y-16">
-      <section className="py-16">
+      <section className="py-12">
         <FadeIn>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Hi, I'm Ishanya!
-          </h1>
+          <div className="flex flex-col sm:flex-row items-center gap-6 mb-8">
+            <img src={profileImage} alt="Ishanya" className="w-24 h-24 rounded-2xl object-cover border-2 border-primary/20 shadow-lg" />
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-2 text-foreground">
+                Hi, I'm Ishanya! 👋
+              </h1>
+              <p className="text-muted-foreground text-lg">Researcher, tinkerer, and perpetual question-asker.</p>
+            </div>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
@@ -25,7 +32,7 @@ const Index = () => {
             I just finished my BS from <a href="https://www.iiserb.ac.in/" target="_blank" rel="noopener noreferrer" className="link-accent">IISER Bhopal</a> and
             I'm looking to pursue an MS/PhD. This website is my little corner of the internet where I share what I'm learning,
             what I'm working on, and a bit of who I am. Feel free to look around, and if anything resonates,
-            {' '}<a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="link-accent">drop me a message on LinkedIn</a>!
+            {' '}<a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="link-accent font-medium">drop me a message on LinkedIn</a>!
           </p>
         </FadeIn>
 
@@ -46,14 +53,14 @@ const Index = () => {
           <h2 className="text-xl font-semibold mb-6 text-foreground">Explore</h2>
           <StaggerContainer className="grid sm:grid-cols-2 gap-4">
             {[
-              { to: '/cv', title: 'Experience', desc: 'Research positions, awards, and my journey so far' },
-              { to: '/blog', title: 'Blog', desc: 'Personal stories and things I find fascinating' },
-              { to: '/places', title: 'Places', desc: 'Research visits and conferences around India' },
-              { to: '/misc', title: 'Fun Stuff', desc: 'Side projects, random thoughts, and the lighter side' },
+              { to: '/cv', title: 'Experience', desc: 'Research positions, awards, and my journey so far', emoji: '📄' },
+              { to: '/blog', title: 'Blog', desc: 'Personal stories and things I find fascinating', emoji: '✍️' },
+              { to: '/places', title: 'Places', desc: 'Research visits and conferences around India', emoji: '🌏' },
+              { to: '/misc', title: 'Fun Stuff', desc: 'Art, photos, random thoughts, and the lighter side', emoji: '🎨' },
             ].map(item => (
               <StaggerItem key={item.to}>
                 <Link to={item.to} className="section-card section-card-hover block p-5">
-                  <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
+                  <h3 className="font-medium text-foreground mb-1">{item.emoji} {item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </Link>
               </StaggerItem>
@@ -63,7 +70,7 @@ const Index = () => {
       </FadeIn>
 
       <FadeIn>
-        <section className="section-card">
+        <section className="section-card fun-gradient">
           <h2 className="text-xl font-semibold mb-4 text-foreground">What I'm Up To</h2>
           <div className="grid sm:grid-cols-2 gap-6">
             <div>
