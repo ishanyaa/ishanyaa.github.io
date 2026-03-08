@@ -32,8 +32,7 @@ const CV = () => {
         'Built a lightweight CNN (FLCNN) for CIFAR-10 under non-IID data and intermittent connectivity',
         'Benchmarked federated vs centralised training against ShuffleNetV2',
         'Developed a local differential privacy activity recognition pipeline (95.93% accuracy)',
-        'Co-developed EchoCare, a proof-of-concept for a low-cost AI-enabled digital stethoscope',
-        'Proposed a federated learning training strategy for continual model improvement without centralising patient data'
+        'Co-developed EchoCare, a low-cost AI-enabled digital stethoscope, and proposed a federated learning training strategy for continual model improvement without centralising patient data'
       ]
     },
     {
