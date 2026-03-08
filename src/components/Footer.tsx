@@ -5,7 +5,6 @@ const Footer = () => {
   const [visitorInfo, setVisitorInfo] = useState<{ count: number; country: string } | null>(null);
 
   useEffect(() => {
-    // Simple visitor counter using localStorage + free geo API
     const visits = parseInt(localStorage.getItem('visitor_count') || '0', 10) + 1;
     localStorage.setItem('visitor_count', visits.toString());
 
@@ -25,11 +24,11 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-center sm:text-left">
             <p className="text-sm text-muted-foreground">
-              {new Date().getFullYear()} Ishanya · Made with curiosity and too much chai ☕
+              {new Date().getFullYear()} Ishanya
             </p>
             {visitorInfo && (
               <p className="text-xs text-muted-foreground mt-1">
-                👋 Visitor #{visitorInfo.count} from {visitorInfo.country}
+                Visitor #{visitorInfo.count} from {visitorInfo.country}
               </p>
             )}
           </div>

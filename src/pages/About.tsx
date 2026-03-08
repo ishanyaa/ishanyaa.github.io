@@ -20,7 +20,7 @@ const About = () => {
               </p>
             </SlideIn>
             <SlideIn direction="right" className="flex-1 text-center md:text-left">
-              <h1 className="text-3xl font-bold mb-2 text-foreground">Hey, I'm Ishanya! 👋</h1>
+              <h1 className="text-3xl font-bold mb-2 text-foreground">Hey, I'm Ishanya!</h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-4">
                 I recently graduated from IISER Bhopal (BS in EECS, Aug 2025). I'm deeply curious about
                 AI safety, privacy-preserving AI, and how we can govern AI systems responsibly.
@@ -122,12 +122,12 @@ const About = () => {
               <div className="p-4 rounded-xl bg-primary/5">
                 <h3 className="font-medium text-foreground mb-3">Some things I'm proud of</h3>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>🥇 Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
-                  <li>🥈 Silver Medal in Shot Put</li>
-                  <li>🎯 JEE Paper 2 All India Rank 160</li>
-                  <li>📚 Founded Arivu India and Uncharted Chapters for educational access</li>
-                  <li>🤝 Peer Counselor at IISER Bhopal (2022-2024)</li>
-                  <li>✍️ Editor at Chrysalis Club, IISER Bhopal's science magazine</li>
+                  <li>Gold Medal in Discus Throw (SANGHARSH Sports 2023, 2024)</li>
+                  <li>Silver Medal in Shot Put</li>
+                  <li>JEE Paper 2 All India Rank 160</li>
+                  <li>Founded Arivu India and Uncharted Chapters for educational access</li>
+                  <li>Peer Counselor at IISER Bhopal (2022-2024)</li>
+                  <li>Editor at Chrysalis Club, IISER Bhopal's science magazine</li>
                 </ul>
               </div>
             </SlideIn>
@@ -135,11 +135,11 @@ const About = () => {
               <div className="p-4 rounded-xl bg-accent/5">
                 <h3 className="font-medium text-foreground mb-3">Currently exploring</h3>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>📖 AI ethics through Turing College (EU-funded)</li>
-                  <li>☁️ AWS Cloud Women Mentoring Program alumni</li>
-                  <li>🏫 Upcoming: ACM India Summer School at IIT Gandhinagar</li>
-                  <li>🔐 Upcoming: Privacy Workshop at IIT Delhi</li>
-                  <li>🔍 Always looking for the next interesting problem</li>
+                  <li>AI ethics through Turing College (EU-funded)</li>
+                  <li>AWS Cloud Women Mentoring Program alumni</li>
+                  <li>Upcoming: ACM India Summer School at IIT Gandhinagar</li>
+                  <li>Upcoming: Privacy Workshop at IIT Delhi</li>
+                  <li>Always looking for the next interesting problem</li>
                 </ul>
               </div>
             </SlideIn>
