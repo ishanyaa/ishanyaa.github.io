@@ -5,9 +5,9 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/MotionWrappe
 const Blog = () => {
   const posts = [
     {
-      title: 'The Summer That Changed Everything: TIFR, IIT Delhi, and Finding My Path',
+      title: 'The Summer That Changed Everything: TIFR, Mumbai, and Finding My Path',
       slug: 'tifr-summer-2024',
-      excerpt: "The summer of 2024 was a turning point. Getting selected for both the ACM internship at IIT Delhi and the STCS Vigyan Vidushi at TIFR Mumbai changed how I see research, CS, and honestly, myself.",
+      excerpt: "The summer of 2024 was a turning point. Getting selected for the STCS Vigyan Vidushi at TIFR Mumbai changed how I see research, CS, and honestly, myself. We saw quantum computers, walked Marine Drive, and I found my passion.",
       date: '2025-02-10',
       readTime: '12 min read',
       tags: ['Personal', 'Academia', 'TIFR'],
@@ -15,7 +15,7 @@ const Blog = () => {
     {
       title: 'Down the Rabbit Hole: How a Thesis Topic Led Me to AI Safety',
       slug: 'thesis-to-ai-safety',
-      excerpt: "When I picked privacy-preserving AI as my thesis topic, I had no idea it would open up an entire world of AI safety, security, and governance. Here's how one paper led to hundreds more.",
+      excerpt: "When I picked privacy-preserving AI as my thesis topic, I had no idea it would open up an entire world of AI safety, security, and governance. Also includes the story of fixing a bug at 5 AM with the most beautiful moon I've ever seen.",
       date: '2025-01-20',
       readTime: '15 min read',
       tags: ['AI Safety', 'Privacy', 'Research'],
@@ -28,13 +28,21 @@ const Blog = () => {
       readTime: '10 min read',
       tags: ['Accessibility', 'Personal', 'IIT Delhi'],
     },
+    {
+      title: 'IIT Delhi Summer School: Computational Challenges in Data Privacy',
+      slug: 'iitd-privacy-summer-school',
+      excerpt: "A week of cryptography, differential privacy, and security at IIT Delhi. The lectures, the people, the evenings on the lawn, and how this workshop opened my eyes to entirely new domains.",
+      date: '2025-07-15',
+      readTime: '8 min read',
+      tags: ['Privacy', 'Workshop', 'IIT Delhi'],
+    },
   ];
 
   return (
     <div className="space-y-8">
       <FadeIn>
         <section>
-          <h1 className="text-3xl font-bold text-foreground mb-3">Blog</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-3">Blog ✍️</h1>
           <p className="text-muted-foreground">
             Stories from my journey, things I'm learning, and topics I find fascinating.
             I try to write honestly about my experiences, the good parts and the confusing parts.

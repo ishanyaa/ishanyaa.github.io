@@ -1,13 +1,17 @@
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/MotionWrapper';
+import art1 from '@/assets/art1.png';
+import art2 from '@/assets/art2.png';
+import graduationPic from '@/assets/ishanya-graduation.jpeg';
+import msrAiHealth from '@/assets/msr-aihealth.jpeg';
 
 const Misc = () => {
   const quickFacts = [
-    'Coffee-to-code ratio: approximately 2:1',
-    'Gold Medal in Discus Throw (SANGHARSH Sports 2023 & 2024). Yes, really.',
+    'Coffee-to-code ratio: approximately 2:1 ☕',
+    'Gold Medal in Discus Throw (SANGHARSH Sports 2023 & 2024). Yes, really. 🥇',
     'JEE Paper 2 AIR 160, which means I can technically do non-CS things too',
-    'Former Peer Counselor at IISER Bhopal, because listening is a skill too',
-    'Navigation skill: excellent with Google Maps, questionable without',
-    'Has read more research papers than novels (working on fixing that)',
+    'Former Peer Counselor at IISER Bhopal, because listening is a skill too 🤝',
+    'Navigation skill: excellent with Google Maps, questionable without 🗺️',
+    'Has read more research papers than novels (working on fixing that) 📚',
   ];
 
   const initiatives = [
@@ -62,11 +66,67 @@ const Misc = () => {
     <div className="space-y-8">
       <FadeIn>
         <section>
-          <h1 className="text-3xl font-bold text-foreground mb-3">Misc</h1>
+          <h1 className="text-3xl font-bold text-foreground mb-3">Misc 🎨</h1>
           <p className="text-muted-foreground">
             The fun, experimental, and slightly chaotic side of things.
-            Random thoughts, initiatives, and evidence that I don't take myself too seriously.
+            Random thoughts, initiatives, art, and evidence that I don't take myself too seriously.
           </p>
+        </section>
+      </FadeIn>
+
+      {/* Graduation */}
+      <FadeIn>
+        <section className="section-card fun-gradient">
+          <h2 className="text-xl font-semibold mb-4 text-foreground">🎓 Graduated!</h2>
+          <div className="flex flex-col sm:flex-row gap-6 items-center">
+            <img src={graduationPic} alt="Ishanya at IISER Bhopal graduation" className="w-full sm:w-64 rounded-xl shadow-md border border-border" />
+            <div>
+              <p className="text-muted-foreground">
+                Graduated from IISER Bhopal with a BS in Electrical Engineering and Computer Science, August 2025.
+                Four years of learning, growing, tinkering, and asking too many questions. What a ride!
+              </p>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      {/* AIxHealth Event */}
+      <FadeIn>
+        <section className="section-card">
+          <h2 className="text-xl font-semibold mb-4 text-foreground">🏥 AIxHealth: Bridging Research and Practice</h2>
+          <div className="flex flex-col sm:flex-row gap-6 items-center">
+            <img src={msrAiHealth} alt="Ishanya at the AIxHealth pre-summit event" className="w-full sm:w-64 rounded-xl shadow-md border border-border" />
+            <div>
+              <p className="text-muted-foreground text-sm mb-2">
+                Attended the <a href="https://www.aixhealth.info/blr" target="_blank" rel="noopener noreferrer" className="link-accent">AIxHealth Workshop</a>,
+                the official pre-summit event of the India AI Impact Summit 2026 in Bengaluru.
+              </p>
+              <p className="text-muted-foreground text-sm">
+                The workshop focused on bridging research and practice in AI and global health equity.
+                It brought together practitioners from non-profits, healthcare, and academic/industry researchers
+                to align research agendas with practical challenges. We discussed responsible development,
+                integration, and governance of AI for global health. A truly eye-opening experience!
+              </p>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+
+      {/* Art & Pics */}
+      <FadeIn>
+        <section className="section-card">
+          <h2 className="text-xl font-semibold mb-4 text-foreground">🎨 Art & Pics</h2>
+          <p className="text-muted-foreground mb-4 text-sm">
+            When I'm not reading papers or writing code, I sometimes doodle. Here are a couple of pieces I'm fond of.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <img src={art1} alt="Art by Ishanya - piece 1" className="w-full rounded-xl shadow-md border border-border" />
+            </div>
+            <div>
+              <img src={art2} alt="Art by Ishanya - piece 2" className="w-full rounded-xl shadow-md border border-border" />
+            </div>
+          </div>
         </section>
       </FadeIn>
 
@@ -76,8 +136,7 @@ const Misc = () => {
           <StaggerContainer className="grid sm:grid-cols-2 gap-2">
             {quickFacts.map((fact, index) => (
               <StaggerItem key={index}>
-                <div className="flex items-start gap-2 p-3 bg-secondary/50 rounded-lg">
-                  <span className="text-primary mt-0.5">·</span>
+                <div className="flex items-start gap-2 p-3 bg-primary/5 rounded-lg border border-primary/10">
                   <p className="text-sm text-muted-foreground">{fact}</p>
                 </div>
               </StaggerItem>
@@ -91,7 +150,7 @@ const Misc = () => {
           <h2 className="text-xl font-semibold mb-4 text-foreground">Initiatives</h2>
           <div className="space-y-4">
             {initiatives.map((item, i) => (
-              <div key={i} className="p-4 bg-secondary/50 rounded-lg">
+              <div key={i} className="p-4 bg-primary/5 rounded-lg border border-primary/10">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
                   <h3 className="font-medium text-foreground">{item.title}</h3>
                   <span className="text-xs text-muted-foreground">{item.period}</span>
@@ -109,7 +168,7 @@ const Misc = () => {
           <h2 className="text-xl font-semibold mb-4 text-foreground">Leadership & Service</h2>
           <div className="space-y-4">
             {leadership.map((item, i) => (
-              <div key={i} className="p-4 bg-secondary/50 rounded-lg">
+              <div key={i} className="p-4 bg-accent/5 rounded-lg border border-accent/10">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
                   <h3 className="font-medium text-foreground">{item.title}</h3>
                   <span className="text-xs text-muted-foreground">{item.period}</span>
@@ -124,13 +183,13 @@ const Misc = () => {
 
       <FadeIn>
         <section className="section-card">
-          <h2 className="text-xl font-semibold mb-4 text-foreground">Research Humor</h2>
+          <h2 className="text-xl font-semibold mb-4 text-foreground">Research Humor 😄</h2>
           <div className="space-y-3">
             {memes.map((meme, index) => (
-              <div key={index} className="p-4 bg-secondary/50 rounded-lg">
+              <div key={index} className="p-4 bg-primary/5 rounded-lg border border-primary/10">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-medium text-foreground text-sm">{meme.title}</h3>
-                  <span className="tag text-xs">{meme.category}</span>
+                  <span className="tag-blue text-xs">{meme.category}</span>
                 </div>
                 <p className="text-sm text-muted-foreground italic">"{meme.description}"</p>
               </div>
