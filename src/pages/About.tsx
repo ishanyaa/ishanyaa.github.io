@@ -14,7 +14,7 @@ const About = () => {
                 alt="Ishanya at the IISER Bhopal garden"
                 className="w-44 h-44 rounded-2xl object-cover border-2 border-primary/20 shadow-lg"
               />
-              <p className="text-xs text-muted-foreground text-center mt-2 italic">
+              <p className="text-xs text-muted-foreground text-center mt-2 italic max-w-[11rem] mx-auto">
                 The garden at IISER Bhopal, near the academic building. They plant so many flowers during winter.
                 The warm sun, the bees buzzing around, and good people to chat with about ideas. Core memory.
               </p>
