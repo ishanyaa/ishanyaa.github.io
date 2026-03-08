@@ -2,21 +2,6 @@ import { Github, Linkedin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Footer = () => {
-  const [visitorInfo, setVisitorInfo] = useState<{ count: number; country: string } | null>(null);
-
-  useEffect(() => {
-    const visits = parseInt(localStorage.getItem('visitor_count') || '0', 10) + 1;
-    localStorage.setItem('visitor_count', visits.toString());
-
-    fetch('https://ipapi.co/json/')
-      .then(res => res.json())
-      .then(data => {
-        setVisitorInfo({ count: visits, country: data.country_name || 'Unknown' });
-      })
-      .catch(() => {
-        setVisitorInfo({ count: visits, country: 'Earth' });
-      });
-  }, []);
 
   return (
     <footer className="border-t border-border mt-16">
