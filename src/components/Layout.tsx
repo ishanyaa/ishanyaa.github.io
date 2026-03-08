@@ -13,9 +13,9 @@ const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
         <AnimatePresence mode="wait">
           <PageTransition key={location.pathname}>
             {children}
