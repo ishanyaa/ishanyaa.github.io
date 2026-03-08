@@ -45,8 +45,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
-                <a href="mailto:ishanya.inbox@gmail.com" className="btn-outline text-sm">Email Me</a>
-                <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">Contact Me on LinkedIn</a>
                 <a href="https://github.com/ishanyaa" target="_blank" rel="noopener noreferrer" className="btn-outline text-sm">GitHub</a>
               </div>
             </SlideIn>
