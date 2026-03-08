@@ -35,6 +35,22 @@ const Places = () => {
       category: 'Research',
       memories: 'Delhi in summer is hot, but the work was worth every sweaty commute. Made lifelong friends here.'
     },
+    {
+      name: 'ACM India Summer School: AI for Social Good',
+      location: 'IIT Gandhinagar, Gujarat',
+      date: 'June 2025',
+      description: 'AI for Social Impact, Climate Modelling, Remote Sensing, Health Systems, Deep Learning, GNNs.',
+      category: 'Academic',
+      memories: 'A brilliant mix of AI and real-world impact. The campus was gorgeous too.'
+    },
+    {
+      name: 'Computational Challenges in Data Privacy',
+      location: 'IIT Delhi, New Delhi',
+      date: 'July 2025',
+      description: 'Privacy Workshop: Cryptography, Differential Privacy, Security.',
+      category: 'Academic',
+      memories: 'Back in Delhi! This time for privacy research. Full circle from my ACM internship days.'
+    },
   ];
 
   const getCategoryColor = (category: string) => {
