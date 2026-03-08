@@ -8,7 +8,7 @@ const CV = () => {
       organization: 'Industrial Research Lab',
       location: 'Bengaluru, India',
       period: 'Sept 2025 - Present',
-      area: 'Defect Detection & Edge AI',
+      area: 'Intelligent Systems',
       highlights: [
         'Built a hierarchical sensor-vision defect detection pipeline for a robotic assembly line',
         'Reduced memory footprint by ~90% and improved accuracy from ~54% to >98% using mixture-of-experts models',
