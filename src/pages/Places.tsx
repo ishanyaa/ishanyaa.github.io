@@ -81,18 +81,6 @@ const Places = () => {
         ))}
       </StaggerContainer>
 
-      <FadeIn>
-        <section className="section-card">
-          <h2 className="text-xl font-semibold mb-3 text-foreground">Coming Up</h2>
-          <p className="text-sm text-muted-foreground mb-3">
-            Always planning the next trip. Some are for research, some are just because.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="tag">IIT Gandhinagar (ACM India Summer School, June 2025)</span>
-            <span className="tag">IIT Delhi (Privacy Workshop, July 2025)</span>
-          </div>
-        </section>
-      </FadeIn>
     </div>
   );
 };

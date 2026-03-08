@@ -79,9 +79,9 @@ const About = () => {
           <div className="space-y-6">
             <FadeIn delay={0.1}>
               <div className="p-4 rounded-lg border-l-4 border-primary bg-primary/5">
-                <h3 className="font-medium text-primary mb-1">Researcher (Sept 2025 onwards)</h3>
+                <h3 className="font-medium text-primary mb-1">Industrial Research (Sept 2025 onwards)</h3>
                 <p className="text-sm text-muted-foreground">
-                  Working on privacy-sensitive intelligent systems. Built a defect detection pipeline
+                  Built a defect detection pipeline
                   that reduced memory footprint by ~90% and improved accuracy to over 98%. The work ranked 2nd in a company-wide research competition,
                   which was a nice surprise!
                 </p>

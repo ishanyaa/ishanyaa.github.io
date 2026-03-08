@@ -186,7 +186,7 @@ const Projects = () => {
             Always happy to chat about research ideas or interesting problems. No pressure, just curiosity.
           </p>
           <div className="flex gap-3 justify-center">
-            <a href="mailto:ishanya.inbox@gmail.com" className="btn-outline">Email</a>
+            <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-primary">Contact Me on LinkedIn</a>
             <a href="https://github.com/ishanyaa" target="_blank" rel="noopener noreferrer" className="btn-outline flex items-center gap-2">
               <Github className="w-4 h-4" /> GitHub
             </a>

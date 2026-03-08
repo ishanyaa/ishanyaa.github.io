@@ -155,7 +155,7 @@ const Resources = () => {
           <p className="text-sm text-muted-foreground mb-4">
             Know a great resource I should check out? I'm always looking to learn.
           </p>
-          <a href="mailto:ishanya.inbox@gmail.com" className="btn-outline">Drop me a line</a>
+          <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-outline">Reach out on LinkedIn</a>
         </section>
       </FadeIn>
     </div>

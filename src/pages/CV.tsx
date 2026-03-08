@@ -133,8 +133,8 @@ const CV = () => {
               <h1 className="text-3xl font-bold text-foreground mb-1">Curriculum Vitae</h1>
               <p className="text-muted-foreground">BS (EECS), IISER Bhopal</p>
             </div>
-            <a href="mailto:ishanya.inbox@gmail.com" className="btn-outline flex items-center gap-2">
-              <ExternalLink className="w-4 h-4" /> Contact
+            <a href="https://www.linkedin.com/in/ishanya/" target="_blank" rel="noopener noreferrer" className="btn-outline flex items-center gap-2">
+              <ExternalLink className="w-4 h-4" /> Contact via LinkedIn
             </a>
           </div>
         </section>

@@ -121,7 +121,7 @@ const BlogPost = () => {
         ]},
         { type: 'heading', content: 'Where I Am Heading' },
         { type: 'text', content: "My thesis on federated learning and differential privacy was just the beginning. I want to go deeper into how we can build AI systems that are private, fair, and accountable. That's why I'm looking at MS/PhD programs. Not because I think I have all the answers, but because I have a lot of questions and I want to find a community that shares them." },
-        { type: 'text', content: "If any of this resonates with you, I'd genuinely love to chat. [Find me on LinkedIn](https://www.linkedin.com/in/ishanya/) or drop me an [email](mailto:ishanya.inbox@gmail.com). The more people thinking about these problems, the better." },
+        { type: 'text', content: "If any of this resonates with you, I'd genuinely love to chat. [Find me on LinkedIn](https://www.linkedin.com/in/ishanya/). The more people thinking about these problems, the better." },
       ]
     },
     'accessibility-iit-delhi': {
