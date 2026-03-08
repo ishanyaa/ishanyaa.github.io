@@ -155,7 +155,7 @@ const CV = () => {
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-1">
               <span>Aug 2021 - June 2025</span>
-              <span>GPA: 8.61 / 10</span>
+              
             </div>
           </div>
         </section>
