@@ -45,22 +45,22 @@ const BlogPost = () => {
   const posts: Record<string, Post> = {
     'tifr-summer-2024': {
       title: 'The Summer That Changed Everything: TIFR, Mumbai, and Finding My Path',
-      date: '2025-02-10',
+      date: '2024-12-10',
       readTime: '12 min read',
       tags: ['Personal', 'Academia', 'TIFR'],
       sections: [
-        { type: 'text', content: "Let me be honest: the first time I ever wrote code was in college. I didn't come from a background where CS was a given. At IISER Bhopal, I was figuring things out as I went, and for a while, I wasn't sure where I fit in." },
+        { type: 'text', content: "Let me be honest: the first time I ever wrote code was in college. I didn't come from a background where CS was a given. At IISER Bhopal, I figured things out as I went, and for a while, I wasn't sure where I fit in. I almost felt lost." },
         { type: 'text', content: "Then came the summer of 2024, and everything shifted." },
         { type: 'heading', content: 'Getting Selected' },
-        { type: 'text', content: "I still remember the day I got the email about the STCS Vigyan Vidushi fellowship at TIFR Mumbai. It's funded by Google CSR, and only about 32 people get selected from over a thousand applicants. I read the email three times because I genuinely could not believe it. Around the same time, I got selected for the ACM India summer fellowship at IIT Delhi. Two incredible opportunities in one summer. I was terrified and thrilled in equal measure." },
+        { type: 'text', content: "I still remember the day I got the email about the STCS Vigyan Vidushi fellowship at TIFR Mumbai. I read the email three times because I genuinely could not believe it. Around the same time, I was selected for the ACM India Summer Fellowship at IIT Delhi. Two incredible opportunities in one summer. I was terrified and thrilled in equal measure." },
         { type: 'heading', content: 'TIFR: Where I Found My Passion' },
-        { type: 'image', image: { src: tifrHomi, alt: 'The Homi J Bhabha statue at TIFR Mumbai', caption: 'The iconic Homi J Bhabha statue at TIFR. Standing here for the first time felt surreal.' } },
-        { type: 'text', content: "TIFR was unlike anything I'd experienced. Three weeks of intense learning: error correcting codes, algorithms on graphs, information theory, quantum computing, spectral graph theory. The pace was brutal. Some lectures went completely over my head on the first pass, and I spent evenings trying to piece things together." },
+        { type: 'image', image: { src: tifrHomi, alt: 'The Homi J Bhabha portrait at TIFR Mumbai', caption: 'The iconic Homi J Bhabha portrait at TIFR. Standing here in one of the corridors for the first time felt surreal.' } },
+        { type: 'text', content: "TIFR was unlike anything I'd experienced. 2 weeks of intense learning: error correcting codes, algorithms on graphs, information theory, quantum computing, and a lot of math [HAHHAH]. The pace was brutal, in the best possible way. I genuinely wish I could go back. Some lectures went completely over my head on the first pass, and I spent evenings trying to piece things together. I loved every session. The lectures on graph colouring, error correcting codes, and information theory stood out in particular. They were the ones that pushed me from just solving problems to asking why things work the way they do. That shift mattered. It is what first made research feel compelling rather than abstract. I came away realising that this is not just something I enjoy, it is what I want to spend my life doing. I really value that experience and what it opened up for me." },
         { type: 'image', image: { src: tifrHalls, alt: 'The halls of TIFR', caption: 'The halls of TIFR. There is something about walking through these corridors that makes you feel like you are part of something bigger.' } },
-        { type: 'text', content: "But here's the thing that made it special: the discussions. Late-night conversations on the seashore about open problems. People questioning everything, not to show off, but because they genuinely wanted to understand. The freedom to say \"I don't get this\" without judgment. I'd never been in an environment like that." },
+        { type: 'text', content: "But here's the thing that made it special: the discussions inside and outside the class. Late-night conversations on the seashore about open problems. People questioning everything, not to show off, and with no fear! [The introverted Ishanya would be terrified], but because they genuinely wanted to understand. The freedom to say \"I don't get this\" without judgment. I'd never been in an environment like that." },
         { type: 'heading', content: 'Seeing a Quantum Computer!' },
         { type: 'image', image: { src: tifrQubit, alt: 'Quantum computer setup at TIFR', caption: 'We actually got to see a quantum computing setup at TIFR! After all those lectures on qubits and superposition, seeing the real thing was mind-blowing.' } },
-        { type: 'text', content: "One of the highlights was visiting the quantum computing lab at TIFR. After spending days learning about quantum algorithms and error correcting codes in the classroom, getting to see the actual hardware was surreal. The cooling systems, the sheer engineering that goes into maintaining quantum coherence... it made the theory real in a way that no textbook can." },
+        { type: 'text', content: "One of the highlights was visiting the quantum computing lab at TIFR. After spending days learning about quantum algorithms in the classroom, getting to see the actual hardware was surreal. The cooling systems, the sheer engineering that goes into maintaining quantum coherence... it made the theory real in a way that no textbook can." },
         { type: 'heading', content: 'The People and The Sea' },
         { type: 'text', content: "I met people who had been doing CS since they were 12, and here I was, having started in college. But nobody cared about that. What mattered was curiosity, and curiosity was something I had in abundance." },
         { type: 'image', image: { src: tifrSea, alt: 'Group picture at the sea near TIFR', caption: 'Our group at the sea near TIFR campus. The discussions that happened on these shores were some of the best I have ever had.' } },
@@ -81,7 +81,7 @@ const BlogPost = () => {
     },
     'thesis-to-ai-safety': {
       title: 'Down the Rabbit Hole: How a Thesis Topic Led Me to AI Safety',
-      date: '2025-01-20',
+      date: '2025-10-20',
       readTime: '15 min read',
       tags: ['AI Safety', 'Privacy', 'Research'],
       sections: [
